@@ -33,13 +33,25 @@
 	};
 
 	// ssv
-	const ssvPackageNames = [
-		"core",
-		"au-core",
-	];
-	ssvPackageNames.forEach(pkgName => {
+	const ssvPackages = {
+		bundled: [
+			"core",
+			"au-core",
+			"au-ui"
+		],
+		singles: [
+			"au-ui"
+		]
+	};
+
+	ssvPackages.bundled.forEach(pkgName => {
 		const name = `@ssv/${pkgName}`;
-		packages[name] = { main: "dist/umd/index.js", defaultExtension: "js" };
+		packages[name] = { main: `dist/bundles/ssv-${pkgName}.umd.js`, defaultExtension: "js" };
+	});
+	ssvPackages.singles.forEach(pkgName => {
+		const name = `@ssv/${pkgName}`;
+		map[name] = `npm:${name}/dist/umd`;
+		packages[name] = { main: `../bundles/ssv-${pkgName}.umd.js`, defaultExtension: "js" };
 	});
 
 	// aurelia
