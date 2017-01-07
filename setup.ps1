@@ -8,8 +8,8 @@ Write-Host "npm update..." -ForegroundColor Cyan
 & npm update
 Write-host ""
 
-Write-Host "typings install..." -ForegroundColor Cyan
-& typings install
+Write-Host "npm prune..." -ForegroundColor Cyan
+& npm prune
 Write-host ""
 
 Write-Host "setup symbolic link..." -ForegroundColor Cyan

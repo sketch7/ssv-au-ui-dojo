@@ -2,7 +2,10 @@
   "name": "ssv-au-ui-dojo",
   "version": "1.0.0",
   "description": "Sketch7 playground/dojo for aurelia UI web components",
-  "scripts": {},
+  "scripts": {
+    "start": "gulp watch",
+    "build": "gulp rebuild"
+  },
   "keywords": [
     "web components",
     "aurelia",

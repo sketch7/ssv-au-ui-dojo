@@ -1,24 +1,33 @@
-# ssv-au-dojo
-Playground/dojo for sketch7 aurelia 
+# ssv-au-ui-dojo
+Playground/dojo for sketch7 aurelia.
 
 # Getting started
 
-## Install
+## Setup Machine for Development
+Install/setup the following:
 
-```
-npm install
+- NodeJS
+- TypeScript 2.1+
+- SourceTree (or similar)
+- Ensure to install **global NPM modules** using the following:
 
-jspm install
-```
-
-## Build
-
-```
-gulp build
+```shell
+npm install -g git gulp karma-cli yarn
 ```
 
-## Run/watch
+### Project Setup
+for automated setup run `./setup.ps1`.
 
-```
-gulp watch
+### Manual Setup
+- Run `npm install`
+- Run `npm start`
+
+## Commands
+
+```shell
+# build for dev
+npm run build
+
+# run server for dev
+npm start
 ```
