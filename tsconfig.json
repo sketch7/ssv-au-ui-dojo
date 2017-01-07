@@ -1,0 +1,41 @@
+{
+	"compilerOptions": {
+		"module": "amd",
+		"target": "es5",
+		"moduleResolution": "node",
+		"emitDecoratorMetadata": true,
+		"experimentalDecorators": true,
+		"declaration": false,
+		"noImplicitReturns": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"noImplicitAny": true,
+		"noFallthroughCasesInSwitch": true,
+		"noEmitOnError": true,
+		"strictNullChecks": true,
+		"stripInternal": true,
+		"baseUrl": "src",
+		"paths": {
+			"app": [
+				"app/app.state",
+				"app/app.const"
+			],
+			"comps": [
+				"app/components/index"
+			]
+		},
+		"lib": [
+			"es2015",
+			"dom"
+		]
+	},
+	"include": [
+		"src/**/*",
+		"typings/**/*"
+	],
+	"exclude": [
+		"node_modules",
+		"wwwroot",
+		"dist"
+	]
+}

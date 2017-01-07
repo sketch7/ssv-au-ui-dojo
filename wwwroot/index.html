@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Sketch7 Aurelia Dojo</title>
+	<base href="/">
+	<link href="http://fonts.googleapis.com/css?family=Open+Sans|Montserrat:400,700" rel="stylesheet" type="text/css">
+	<link href="./node_modules/bootstrap/dist/css/bootstrap.css" type="text/css" rel="stylesheet">
+	<link href="./node_modules/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+	<!--<link href="./dist/assets/app-light.theme.css" type="text/css" rel="stylesheet">-->
+	<link href="./dist/assets/app-dark.theme.css" type="text/css" rel="stylesheet">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body aurelia-app="main">
+	<div class="splash-overlay">
+		<div class="loader">
+			<div class="side"></div>
+			<div class="side"></div>
+			<div class="side"></div>
+			<div class="side"></div>
+			<div class="side"></div>
+			<div class="side"></div>
+			<div class="side"></div>
+			<div class="side"></div>
+		</div>
+	</div>
+	<script src="./node_modules/systemjs/dist/system.js"></script>
+	<script src="./system.config.js"></script>
+	<script>
+		System.import("aurelia-bootstrapper");
+	</script>
+
+</body>
+
+</html>
