@@ -21,6 +21,7 @@ for automated setup run `./setup.ps1`.
 ### Manual Setup
 - Run `npm install`
 - Run `npm start`
+- Create symbolic link of `/node_modules` to `wwwroot/node_modules`
 
 ## Commands
 

@@ -13,7 +13,7 @@ Write-Host "npm prune..." -ForegroundColor Cyan
 Write-host ""
 
 Write-Host "setup symbolic link..." -ForegroundColor Cyan
-cmd /c mklink /d wwwroot\node_modules "$(get-location)\node_modules" 
+cmd /c mklink /d wwwroot\node_modules "$(get-location)\node_modules"
 Write-host ""
 
 Write-Host "building..." -ForegroundColor Cyan
