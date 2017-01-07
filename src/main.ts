@@ -6,7 +6,7 @@ export function configure(aurelia: Aurelia) {
 	aurelia.use
 		.standardConfiguration()
 		.developmentLogging()
-		.feature("app/components", {})
+		.feature("app/areas", {})
 		.plugin("@ssv/au-ui")
 		.plugin("aurelia-animator-css");
 	;
