@@ -22,6 +22,7 @@
     "@types/lodash": "^4.14.47",
     "aurelia-animator-css": "^1.0.1",
     "aurelia-bootstrapper": "^2.0.1",
+    "aurelia-ux": "^0.1.14",
     "bluebird": "^3.4.7",
     "bootstrap": "^3.3.7",
     "font-awesome": "^4.7.0",

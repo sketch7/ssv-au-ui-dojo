@@ -37,7 +37,6 @@
 		bundled: [
 			"core",
 			"au-core",
-			"au-ui"
 		],
 		singles: [
 			"au-ui"
@@ -51,7 +50,8 @@
 	ssvPackages.singles.forEach(pkgName => {
 		const name = `@ssv/${pkgName}`;
 		map[name] = `npm:${name}/dist/umd`;
-		packages[name] = { main: `../bundles/ssv-${pkgName}.umd.js`, defaultExtension: "js" };
+		packages[name] = { main: `index.js`, defaultExtension: "js" };
+		// packages[name] = { main: `../bundles/ssv-${pkgName}.umd.js`, defaultExtension: "js" };
 	});
 
 	// aurelia
@@ -82,7 +82,8 @@
 		],
 		singles: [
 			"templating-resources",
-			"templating-router"
+			"templating-router",
+			"ux",
 		]
 	};
 	auPackages.bundled.forEach(pkgName => {
