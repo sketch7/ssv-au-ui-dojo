@@ -6,10 +6,10 @@ export function configure(aurelia: Aurelia) {
 	aurelia.use
 		.standardConfiguration()
 		.developmentLogging()
-		.feature("app/components", {})
+		.feature("app/areas", {})
+		.plugin("aurelia-animator-css")
 		.plugin("aurelia-ux")
 		.plugin("@ssv/au-ui")
-		.plugin("aurelia-animator-css");
 	;
 
 	aurelia.start().then(() => {

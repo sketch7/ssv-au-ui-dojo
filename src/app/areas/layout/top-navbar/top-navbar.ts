@@ -5,8 +5,8 @@ import { ILog, LoggerFactory } from "@ssv/au-core";
 import consts from "app/app.const";
 
 @autoinject
-@customElement("ssv-navbar")
-export class NavBarController {
+@customElement("ssv-topnavbar")
+export class TopNavBarController {
 
 	@bindable router: Router;
 
@@ -23,7 +23,7 @@ export class NavBarController {
 	constructor(
 		loggerFactory: LoggerFactory
 	) {
-		this.logger = loggerFactory.get("navBarController");
+		this.logger = loggerFactory.get("topNavBarController");
 		this.logger.debug("ctor", "init");
 	}
 }
