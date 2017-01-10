@@ -21,8 +21,7 @@ export class RouteStateConfig {
 	componentLayout = `${this.layout}.component-layout`;
 	components = {
 		main: `${this.layout}.component-list`,
-		input: `${this.layout}.input`,
-		button: `${this.layout}.button`
+		detail: `${this.layout}.component-detail`,
 	};
 }
 

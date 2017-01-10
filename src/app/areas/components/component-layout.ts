@@ -19,6 +19,7 @@ export class ComponentsLayoutController {
 
 	configureRouter(config: RouterConfiguration) {
 		this.logger.debug("configureRouter");
+
 		config.map([
 			{
 				route: "",
@@ -26,22 +27,16 @@ export class ComponentsLayoutController {
 				name: consts.routeStates.components.main,
 				moduleId: `${consts.areasBasePath}/components/component-list`,
 				nav: false,
-				settings: { level: 1, icon: "fa fa-cubes", details: `${this.componentService.count()} available` }
-			}, {
-				route: "input",
-				title: "Input",
-				name: consts.routeStates.components.input,
-				moduleId: `${consts.areasBasePath}/components/input/input`,
+				settings: { componentsCount: this.componentService.count() }
+			},
+			{
+				route: ":component",
+				title: "Components Detail",
+				name: consts.routeStates.components.detail,
+				moduleId: `${consts.areasBasePath}/components/component-detail`,
 				nav: false,
 				settings: {}
-			}, {
-				route: "button",
-				title: "Button",
-				name: consts.routeStates.components.button,
-				moduleId: `${consts.areasBasePath}/components/button/button`,
-				nav: false,
-				settings: {}
-			}
+			},
 		]);
 	}
 

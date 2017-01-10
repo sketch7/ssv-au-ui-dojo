@@ -1,0 +1,15 @@
+<template>
+	<div if.bind="component">
+		<h1><strong>${component.title}</strong> Component</h1>
+		<compose view-model="${componentsBasePath}/${component.key}/${component.key}"
+			model.bind="{component: component}">
+		</compose>
+		<div class="navigate-back">
+			Back to <a route-href="route.bind: componentsRoute">components</a>.
+		</div>
+	</div>
+	<div if.bind="!component">
+		<h1>Component <strong>'${key}'</strong>, not found!</h1>
+		Go to <a route-href="route.bind: componentsRoute">components</a>.
+	</div>
+</template>

@@ -1,8 +1,15 @@
 <template>
 	<h1>Components</h1>
-	<div repeat.for="component of components">
+	<!--<div repeat.for="component of components">
 		<compose view-model="${$parent.componentsBasePath}/${component.key}/${component.key}" 
 			model.bind="{component: component}">
 		</compose>
-	</div>
+	</div>-->
+	<ul>
+		<li repeat.for="component of components">
+			<a route-href="route.bind: componentDetailRoute; params.bind: { component: component.key }">
+				${component.title}
+			</a>
+		</li>
+	</ul>
 </template>

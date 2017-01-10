@@ -6,11 +6,14 @@ import { ComponentService } from "./component.service";
 import { Component } from "./component.model";
 
 @autoinject
-export class ComponentListController {
+export class ComponentDetailController {
 
-	componentDetailRoute = consts.routeStates.components.detail;
+	componentsBasePath = `${consts.areasBasePath}/components`;
 
-	components: Component[];
+	key: string;
+	component: Component | undefined;
+	componentsRoute = consts.routeStates.components.main;
+
 	private logger: ILog;
 
 	constructor(
@@ -20,8 +23,8 @@ export class ComponentListController {
 		this.logger = loggerFactory.get("component-list");
 	}
 
-	activate() {
-		this.components = this.service.getAll();
+	activate(params: { component: string }) {
+		this.key = params.component;
+		this.component = this.service.getByKey(params.component);
 	}
-
 }
