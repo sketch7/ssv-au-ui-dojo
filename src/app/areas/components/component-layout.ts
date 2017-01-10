@@ -2,7 +2,7 @@ import { autoinject } from "aurelia-framework";
 import { RouterConfiguration } from "aurelia-router";
 import { ILog, LoggerFactory } from "@ssv/au-core";
 
-import consts from "app/app.const";
+import { consts, routes } from "app/common";
 import { ComponentService } from "./component.service";
 
 @autoinject
@@ -14,7 +14,7 @@ export class ComponentsLayoutController {
 		loggerFactory: LoggerFactory,
 		private componentService: ComponentService
 	) {
-		this.logger = loggerFactory.get("ComponentLayout");
+		this.logger = loggerFactory.get("componentsLayoutController");
 	}
 
 	configureRouter(config: RouterConfiguration) {
@@ -24,7 +24,7 @@ export class ComponentsLayoutController {
 			{
 				route: "",
 				title: "Components",
-				name: consts.routeStates.components.main,
+				name: routes.components.main,
 				moduleId: `${consts.areasBasePath}/components/component-list`,
 				nav: false,
 				settings: { componentsCount: this.componentService.count() }
@@ -32,7 +32,7 @@ export class ComponentsLayoutController {
 			{
 				route: ":component",
 				title: "Components Detail",
-				name: consts.routeStates.components.detail,
+				name: routes.components.detail,
 				moduleId: `${consts.areasBasePath}/components/component-detail`,
 				nav: false,
 				settings: {}

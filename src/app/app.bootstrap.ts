@@ -17,6 +17,7 @@ export class Bootstrapper {
 	}
 
 	bootstrap(): void {
+		/*stub*/
 	}
 
 

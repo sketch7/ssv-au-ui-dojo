@@ -1,5 +1,5 @@
 import { RouterConfiguration } from "aurelia-router";
-import consts from "app/app.const";
+import { consts, routes } from "app/common";
 
 export class AppRouter {
 
@@ -9,14 +9,14 @@ export class AppRouter {
 			{
 				route: ["", "home"],
 				title: "Home",
-				name: consts.routeStates.home,
+				name: routes.home,
 				moduleId: `${consts.areasBasePath}/home/home`,
 				nav: false,
 				settings: {}
 			}, {
 				route: "components",
 				title: "Components",
-				name: consts.routeStates.componentLayout,
+				name: routes.componentLayout,
 				moduleId: `${consts.areasBasePath}/components/component-layout`,
 				nav: true,
 				settings: {}

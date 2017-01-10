@@ -1,6 +1,6 @@
 import { autoinject } from "aurelia-framework";
 
-import { ILog, LoggerFactory, consts } from "app/common";
+import { ILog, LoggerFactory, routes, consts } from "app/common";
 
 import { ComponentService } from "./component.service";
 import { Component } from "./component.model";
@@ -12,7 +12,7 @@ export class ComponentDetailController {
 
 	key: string;
 	component: Component | undefined;
-	componentsRoute = consts.routeStates.components.main;
+	componentsRoute = routes.components.main;
 
 	private logger: ILog;
 
@@ -20,7 +20,7 @@ export class ComponentDetailController {
 		loggerFactory: LoggerFactory,
 		private service: ComponentService
 	) {
-		this.logger = loggerFactory.get("component-list");
+		this.logger = loggerFactory.get("componentDetailController");
 	}
 
 	activate(params: { component: string }) {

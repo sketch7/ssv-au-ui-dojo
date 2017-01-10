@@ -2,7 +2,7 @@ import { autoinject, customElement, bindable } from "aurelia-framework";
 import { Router } from "aurelia-router";
 import { ILog, LoggerFactory } from "@ssv/au-core";
 
-import consts from "app/app.const";
+import { consts } from "app/common";
 
 @autoinject
 @customElement("ssv-topnavbar")

@@ -8,11 +8,9 @@ export class AppConst {
 	name = "Sketch 7 UI Dojo";
 	version = "1.0.0-alpha";
 
-	routeStates = new RouteStateConfig();
 }
 
-
-export class RouteStateConfig {
+export class RoutesConfig {
 	layout = "layout";
 
 	error = "error";
@@ -24,5 +22,7 @@ export class RouteStateConfig {
 		detail: `${this.layout}.component-detail`,
 	};
 }
+
+export const routes = new RoutesConfig();
 
 export default new AppConst();
