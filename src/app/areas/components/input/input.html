@@ -5,22 +5,28 @@
 			theme.bind="{foreground: 'red'}"></ssv-input>
 	</section>
 
-	<form>
-		<div class="row">
-			<ssv-input ref="disabledInput"
-				label="Disabled"
-				value="I am not editable"
-				disabled></ssv-input>
-		</div>
-		<div class="row">
-			<ssv-input ref="disabledInput"
-				label="Bound Disabled"
-				value="I am not editable and disable is bound"
-				disabled.bind="isDisabled"></ssv-input>
-		</div>
-		<div class="row">
-			<ssv-input label="Password" type="password"></ssv-input>
-		</div>
-	</form>
-	<button click.trigger="toggleDisable()">Toggle Disable (${isDisabled})</button>
+	<section>
+		<form>
+			<div class="row">
+				<ssv-input label="First Name"
+					placeholder="e.g. Chiko"></ssv-input>
+			</div>
+			<div class="row">
+				<ssv-input label="Disabled"
+					value="I am not editable"
+					disabled></ssv-input>
+			</div>
+			<div class="row">
+				<ssv-input ref="disabledInput"
+					label="Bound Disabled"
+					value="I am not editable and disable is bound"
+					disabled.bind="isDisabled"></ssv-input>
+			</div>
+			<div class="row">
+				<ssv-input label="Password"
+					type="password"></ssv-input>
+			</div>
+		</form>
+		<button click.trigger="toggleDisable()">Toggle Disable (${isDisabled})</button>
+	</section>
 </template>
