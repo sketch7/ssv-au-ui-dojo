@@ -1,45 +1,62 @@
 @import "variables";
+
+$layout-header-height-size: 100px;
+$layout-footer-height-size: 100px;
+$nav-width-size: 250px;
+
 html {
-	background: linear-gradient( 
-		rgba(220, 220, 220, 0.7), 
-		rgba(175, 175, 175, 0.5)), 
-		no-repeat center center url("/dist/assets/imgs/bg-hacker.jpg");
+	background: linear-gradient( rgba(220, 220, 220, 0.7), rgba(175, 175, 175, 0.5)), no-repeat center center url("/dist/assets/imgs/bg-hacker.jpg");
 	background-size: cover;
 }
 
 body {
-	background: none!important;
-	margin-bottom: 60px;
-	.main.container {
-		padding: 60px 15px 20px;
-	}
-}
-
-.container {
-	.text-muted {
-		margin: 20px 0;
-	}
-}
-
-footer {
-	position: absolute;
-	bottom: 0;
-	width: 100%;
-	height: 60px;
-	background: $secondary-bg-color;
-	> .container {
-		padding: 0 15px;
-	}
-}
-
-.nav {
-	.user-profile {
-		a {
-			padding-top: 10px;
+	display: flex;
+	flex-direction: column;
+	box-sizing: border-box;
+	> {
+		header {
+			background: green;
+			height: $layout-header-height-size;
 		}
-		img {
-			width: 30px;
-			height: 30px;
+		main {
+			@extend %main-container;
+		}
+		footer {
+			background: orangered;
+			height: $layout-footer-height-size;
+		}
+	}
+}
+
+%main-container {
+	display: flex;
+	min-height: calc(100vh - (#{$layout-header-height-size} + #{$layout-footer-height-size}));
+	> {
+		article {
+			background: purple;
+			flex: 4 4;
+		}
+		nav,
+		aside {
+			flex: 1;
+		}
+		nav {
+			min-width: $nav-width-size;
+			max-width: $nav-width-size;
+			background: gold;
+		}
+		aside {
+			background: hotpink;
+		}
+	}
+}
+
+@media screen and (max-width: 500px) {
+	body>main {
+		flex-direction: column;
+		>nav {
+			order: 2;
+			max-width: inherit;
 		}
 	}
 }
