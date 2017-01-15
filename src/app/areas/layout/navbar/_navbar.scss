@@ -36,10 +36,15 @@ app-navbar {
 					background-color: rgba(0, 0, 0, .1);
 					transition: background-color .2s ease-in-out;
 				}
+				&.active {
+					background-color: rgba(0, 0, 0, .1);
+
+					a {
+						color: #fff5e5;
+					}
+				}
 			}
-			.active {
-				background-color: rgba(0, 0, 0, .1);
-			}
+
 			a {
 				display: flex;
 				align-items: center;
