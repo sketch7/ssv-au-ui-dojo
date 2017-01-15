@@ -1,12 +1,13 @@
 @import "variables";
-$nav-width-size: 250px;
+$nav-width-size: $layout-navbar-width-size;
 
 app-sidenavbar {
 	display: flex;
+
 	nav {
 		min-width: $nav-width-size;
 		max-width: $nav-width-size;
-			background: #544F48;
+		background: $secondary-color;
 	}
 }
 

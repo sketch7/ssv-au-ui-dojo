@@ -3,7 +3,7 @@ $layout-header-height-size: 80px;
 $layout-footer-height-size: 100px;
 body {
 	// background: linear-gradient( rgba(220, 220, 220, 0.7), rgba(175, 175, 175, 0.5)), no-repeat center center url("/dist/assets/imgs/bg-hacker.jpg");
-	background: #f0f0f0;
+	background: $body-bg-color;
 	background-size: cover;
 	display: flex;
 	flex-direction: column;
