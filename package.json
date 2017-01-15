@@ -27,6 +27,7 @@
     "bootstrap": "^3.3.7",
     "font-awesome": "^4.7.0",
     "lodash": "^4.17.4",
+    "normalize-scss": "^6.0.0",
     "systemjs": "^0.19.41"
   },
   "devDependencies": {

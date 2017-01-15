@@ -27,7 +27,8 @@ module.exports = {
 	sass: {
 		includePaths: [
 			"./src/assets/styles",
-			"./node_modules/@ssv/au-ui/dist/sass"
+			"./node_modules/@ssv/au-ui/dist/sass",
+			"./node_modules/normalize-scss/sass",
 		]
 	},
 	doc: "./doc",
