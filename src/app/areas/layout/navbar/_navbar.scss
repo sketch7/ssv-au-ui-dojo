@@ -7,16 +7,22 @@ app-navbar {
 		display: flex;
 		flex-flow: row wrap;
 		.logo {
-			min-width: 240px;
-			max-width: 240px;
-			padding-left: 10px;
+			min-width: 220px;
+			max-width: 220px;
+			padding-left: 30px;
 			flex: 1;
 			align-self: center;
+			color: #61481f;
 			font-weight: 600;
 			font-size: 30px;
+			cursor: default;
+			user-select: none;
 			.secondary-text {
+				margin-left: -5px;
+				letter-spacing: -1px;
 				font-size: 30px;
-				color: #fff;
+				color: #fff5e5;
+				
 			}
 			
 		}
