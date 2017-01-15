@@ -2,45 +2,53 @@
 	<section>
 		<h2>Simple Usage</h2>
 		<ssv-input label="First name"
-			theme.bind="{foreground: 'red'}"></ssv-input>
+			theme.bind="{foreground: 'red'}">
+		</ssv-input>
 	</section>
 
 	<section>
 		<form>
 			<div class="row">
 				<ssv-input label="First Name"
-					placeholder="e.g. Chiko"></ssv-input>
+					placeholder="e.g. Chiko">
+				</ssv-input>
 			</div>
 			<div class="row">
 				<ssv-input label="Disabled"
 					value="I am not editable"
-					disabled></ssv-input>
+					disabled>
+				</ssv-input>
 			</div>
 			<div class="row">
 				<ssv-input ref="disabledInput"
 					label="Bound Disabled"
 					value="I am not editable and disable is bound"
-					disabled.bind="isDisabled"></ssv-input>
+					disabled.bind="isDisabled">
+				</ssv-input>
 				<button click.trigger="toggleDisable()">${isDisabled ? "enable" : "disable"}</button>
 			</div>
 			<div class="row">
 				<ssv-input label="Password"
-					type="password"></ssv-input>
+					type="password">
+				</ssv-input>
 			</div>
 			<div class="row">
 				<ssv-input label="Input with success"
 					value="Successful!"
-					class="success"></ssv-input>
+					class="success">
+				</ssv-input>
 			</div>
 			<div class="row">
 				<ssv-input label="Input with error"
 					value="Failure!"
-					class="error"></ssv-input>
+					class="error">
+				</ssv-input>
 			</div>
 			<div class="row">
 				<ssv-input label="Input with warning"
 					value="Warning!"
-					class="warn"></ssv-input>
+					class="warn">
+				</ssv-input>
 			</div>
 		</form>
 
