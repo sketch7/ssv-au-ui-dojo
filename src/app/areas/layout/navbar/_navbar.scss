@@ -10,9 +10,11 @@ app-navbar {
 	display: flex;
 	flex-direction: column;
 	background: #FAC05E;
+
 	header {
 		display: flex;
 		flex-flow: row wrap;
+
 		.logo {
 			min-width: $layout-navbar-width-size - $logo-padding-left;
 			max-width: $layout-navbar-width-size - $logo-padding-left;
@@ -24,6 +26,7 @@ app-navbar {
 			font-size: $logo-font-size;
 			cursor: default;
 			user-select: none;
+
 			.secondary-text {
 				margin-left: -5px;
 				letter-spacing: -1px;
@@ -31,20 +34,18 @@ app-navbar {
 				color: $primary-text-color;
 			}
 		}
+
 		ul {
 			flex: 2;
 			display: flex;
 			list-style: none;
+
 			li {
 				display: flex;
-				&:hover {
-					background-color: $nav-hover-color;
-					transition: background-color .2s ease-in-out;
-				}
-				&.active {
-					background-color: $nav-active-color;
 
+				&.active {
 					a {
+						background-color: $nav-active-color;
 						color: $primary-text-color;
 					}
 				}
@@ -57,6 +58,11 @@ app-navbar {
 				text-decoration: none;
 				padding: 0 1em;
 				color: $secondary-text-color;
+
+				&:hover {
+					background-color: $nav-hover-color;
+					transition: background-color .2s ease-in-out;
+				}
 			}
 		}
 	}

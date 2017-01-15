@@ -18,17 +18,12 @@ app-sidenavbar {
 			flex-direction: column;
 
 			li {
-				
+
 				display: flex;
-				&:hover {
-					background-color: $nav-hover-color;
-					transition: background-color .2s ease-in-out;
-				}
 
 				&.active {
-					background-color: $nav-active-color;
-
 					a {
+						background-color: $nav-active-color;
 						color: $primary-text-color;
 					}
 				}
@@ -43,6 +38,11 @@ app-sidenavbar {
 				text-decoration: none;
 				padding: .7em 1em;
 				color: $primary-text-color;
+
+				&:hover {
+					background-color: $nav-hover-color;
+					transition: background-color .2s ease-in-out;
+				}
 			}
 		}
 	}
