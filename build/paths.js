@@ -16,12 +16,19 @@ module.exports = {
 		typings: [typings, `./${outRoot}/jspm_packages/**/*.d.ts`],
 		ts: `./${srcRoot}/**/*.ts`,
 		html: `./${srcRoot}/app/**/*.html`,
-		sass: [`./${srcRoot}/app/**/*.scss`, `./${srcRoot}/assets/styles/**/*.scss`],
+		sass: [
+			`./${srcRoot}/app/**/*.scss`,
+			`./${srcRoot}/assets/styles/**/*.scss`,
+			`./node_modules/@ssv/au-ui/dist/sass/**/*.scss`,
+		],
 		imgs: `./${srcRoot}/assets/**/*.{png,jpeg,jpg}`,
 		indexHtml: `./${srcRoot}/index.html`
 	},
 	sass: {
-		includePaths: ["./src/assets/styles"]
+		includePaths: [
+			"./src/assets/styles",
+			"./node_modules/@ssv/au-ui/dist/sass"
+		]
 	},
 	doc: "./doc",
 	packageName: pkg.name
