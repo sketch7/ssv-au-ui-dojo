@@ -1,8 +1,6 @@
 @import "variables";
-
 $layout-header-height-size: 80px;
 $layout-footer-height-size: 100px;
-
 body {
 	// background: linear-gradient( rgba(220, 220, 220, 0.7), rgba(175, 175, 175, 0.5)), no-repeat center center url("/dist/assets/imgs/bg-hacker.jpg");
 	background: #f0f0f0;
@@ -24,9 +22,8 @@ body {
 			div {
 				flex: 1;
 			}
-
 			.right-content {
-				display:flex;
+				display: flex;
 				justify-content: flex-end;
 			}
 		}
@@ -34,9 +31,9 @@ body {
 }
 
 .right-content {
-				display:flex;
-				justify-content: flex-end;
-			}
+	display: flex;
+	justify-content: flex-end;
+}
 
 %main-container {
 	display: flex;
@@ -54,11 +51,21 @@ body {
 }
 
 @media screen and (max-width: 500px) {
-	body>main {
-		flex-direction: column;
-		> app-sidenavbar nav {
-			order: 2;
-			max-width: inherit;
+	body> {
+		app-navbar,
+		app-navbar header {
+			flex-flow: column wrap;
+			align-items: center;
+			 .logo {
+				 text-align: center;
+			}
+		}
+		main {
+			flex-direction: column;
+			>app-sidenavbar nav {
+				order: 2;
+				max-width: inherit;
+			}
 		}
 	}
 }

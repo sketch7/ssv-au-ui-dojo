@@ -5,55 +5,43 @@ app-navbar {
 	background: #FAC05E;
 	header {
 		display: flex;
+		flex-flow: row wrap;
 		.logo {
+			min-width: 240px;
+			max-width: 240px;
+			padding-left: 10px;
 			flex: 1;
 			align-self: center;
 			font-weight: 600;
 			font-size: 30px;
-			span {
+			.secondary-text {
 				font-size: 30px;
 				color: #fff;
 			}
+			
 		}
-		.nav {
-			flex: 1;
+		ul {
+			flex: 2;
 			display: flex;
 			list-style: none;
-			flex-flow: row wrap;
-			.active {
-				background-color: rgba(0, 0, 0, .1);
-			}
-			a {
-				text-decoration: none;
-				display: block;
-				padding: 1em;
-				color: #333;
+			li {
+				display: flex;
 				&:hover {
 					background-color: rgba(0, 0, 0, .1);
 					transition: background-color .2s ease-in-out;
 				}
 			}
+			.active {
+				background-color: rgba(0, 0, 0, .1);
+			}
+			a {
+				display: flex;
+				align-items: center;
+				text-transform: uppercase;
+				text-decoration: none;
+				padding: 0 1em;
+				color: #333;
+			}
 		}
 	}
 }
-
-// .navbar {
-// 	background: $navbar-bg-color;
-// 	&, .navbar-nav li {
-// 		a {
-// 			color: $navbar-text-color;
-// 			&:focus, &:hover {
-// 				background: $navbar-active-bg-hover-color;
-// 			}
-// 		}
-// 	}
-// 	.navbar-brand {
-// 		&:focus, &:hover {
-// 			color: $navbar-brand-text-hover-color;
-// 			background: $navbar-brand-bg-hover-color;
-// 		}
-// 	}
-// 	.active a {
-// 		background: $navbar-active-bg-color;
-// 	}
-// }

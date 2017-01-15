@@ -1,7 +1,10 @@
 <template>
 	<header>
 		<div class="logo">
-			ui<span> dojo</span>
+			ui<span class="secondary-text"> dojo</span>
+			<span class="loader" if.bind="router.isNavigating">
+				<i class="fa fa-spinner fa-spin"></i>
+			</span>
 		</div>
 		<ul class="nav">
 			<li repeat.for="route of router.navigation" class="${route.isActive ? 'active' : ''}">
@@ -11,11 +14,11 @@
 			<li class="nav-item"><a class="nav-link" href="#">colors</a></li>
 		</ul>
 		<ul class="nav right-content">
-			<li class="nav-item"><a class="nav-link" href="#">Features</a></li>
-			<li class="nav-item"><a class="nav-link" href="#">colors</a></li>
-			<li class="loader" if.bind="router.isNavigating">
+			<li class="nav-item"><a class="nav-link" href="#">Light</a></li>
+			<li class="nav-item"><a class="nav-link" href="#">Dark</a></li>
+			<!--<li class="loader" if.bind="router.isNavigating">
 				<i class="fa fa-spinner fa-spin fa-2x"></i>
-			</li>
+			</li>-->
 		</ul>
 	</header>
 	<!--<nav class="navbar navbar-fixed-top">
