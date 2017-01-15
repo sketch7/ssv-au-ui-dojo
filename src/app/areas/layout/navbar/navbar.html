@@ -1,6 +1,22 @@
 <template>
 	<header>
-		<h1>Header</h1>
+		<div class="logo">
+			ui<span> dojo</span>
+		</div>
+		<ul class="nav">
+			<li repeat.for="route of router.navigation" class="${route.isActive ? 'active' : ''}">
+				<a href.bind="route.href">${route.title}</a>
+			</li>
+			<li class="nav-item"><a class="nav-link" href="#">Features</a></li>
+			<li class="nav-item"><a class="nav-link" href="#">colors</a></li>
+		</ul>
+		<ul class="nav right-content">
+			<li class="nav-item"><a class="nav-link" href="#">Features</a></li>
+			<li class="nav-item"><a class="nav-link" href="#">colors</a></li>
+			<li class="loader" if.bind="router.isNavigating">
+				<i class="fa fa-spinner fa-spin fa-2x"></i>
+			</li>
+		</ul>
 	</header>
 	<!--<nav class="navbar navbar-fixed-top">
 		<div class="container">

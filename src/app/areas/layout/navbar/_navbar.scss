@@ -1,4 +1,42 @@
 @import "variables";
+app-navbar {
+	display: flex;
+	flex-direction: column;
+	background: #FAC05E;
+	header {
+		display: flex;
+		.logo {
+			flex: 1;
+			align-self: center;
+			font-weight: 600;
+			font-size: 30px;
+			span {
+				font-size: 30px;
+				color: #fff;
+			}
+		}
+		.nav {
+			flex: 1;
+			display: flex;
+			list-style: none;
+			flex-flow: row wrap;
+			.active {
+				background-color: rgba(0, 0, 0, .1);
+			}
+			a {
+				text-decoration: none;
+				display: block;
+				padding: 1em;
+				color: #333;
+				&:hover {
+					background-color: rgba(0, 0, 0, .1);
+					transition: background-color .2s ease-in-out;
+				}
+			}
+		}
+	}
+}
+
 // .navbar {
 // 	background: $navbar-bg-color;
 // 	&, .navbar-nav li {

@@ -2,21 +2,11 @@ import { autoinject, customElement, bindable } from "aurelia-framework";
 import { Router } from "aurelia-router";
 import { ILog, LoggerFactory } from "@ssv/au-core";
 
-import consts from "app/app.const";
-
 @autoinject
-@customElement("ssv-sidenavbar")
+@customElement("app-sidenavbar")
 export class SideNavBarController {
 
 	@bindable router: Router;
-
-	get appTitle() {
-		return consts.name;
-	}
-
-	get appVersion() {
-		return consts.version;
-	}
 
 	private logger: ILog;
 

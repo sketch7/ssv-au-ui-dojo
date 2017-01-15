@@ -24,7 +24,6 @@
     "aurelia-bootstrapper": "^2.0.1",
     "aurelia-ux": "^0.1.14",
     "bluebird": "^3.4.7",
-    "bootstrap": "^3.3.7",
     "font-awesome": "^4.7.0",
     "lodash": "^4.17.4",
     "systemjs": "^0.19.41"
