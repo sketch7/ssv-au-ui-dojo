@@ -3,11 +3,48 @@ $nav-width-size: $layout-navbar-width-size;
 
 app-sidenavbar {
 	display: flex;
+	min-width: $nav-width-size;
+	max-width: $nav-width-size;
+	background: $secondary-color;
 
 	nav {
-		min-width: $nav-width-size;
-		max-width: $nav-width-size;
-		background: $secondary-color;
+		display: flex;
+		flex: 1;
+
+		ul {
+			display: flex;
+			flex: 1;
+			list-style: none;
+			flex-direction: column;
+
+			li {
+				
+				display: flex;
+				&:hover {
+					background-color: $nav-hover-color;
+					transition: background-color .2s ease-in-out;
+				}
+
+				&.active {
+					background-color: $nav-active-color;
+
+					a {
+						color: $primary-text-color;
+					}
+				}
+			}
+
+			a {
+				display: flex;
+				flex: 1;
+				align-items: center;
+				height: 30px;
+				text-transform: uppercase;
+				text-decoration: none;
+				padding: .7em 1em;
+				color: $primary-text-color;
+			}
+		}
 	}
 }
 

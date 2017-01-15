@@ -1,5 +1,13 @@
 <template>
-<nav>Navigation 2</nav>
+	<nav>
+		<ul>
+			<li repeat.for="route of router.navigation" class="${route.isActive ? 'active' : ''}">
+				<a href.bind="route.href">${route.title}</a>
+			</li>
+			<li><a href="#">Features</a></li>
+			<li><a href="#">colors</a></li>
+		</ul>
+	</nav>
 	<!--<nav class="navbar navbar-inverse navbar-fixed-left">
 		<a class="navbar-brand" href="#">Brand</a>
 		<a class="navbar-brand" href="#">Brand</a>
