@@ -1,12 +1,18 @@
 <template>
 	<section>
 		<h2>Simple Usage</h2>
-		<ssv-input label="First name"
-			theme.bind="{foreground: 'red'}">
-		</ssv-input>
+		<form>
+			<ssv-input label="First name"
+				value.bind="firstName"
+				type="text"
+				help="press submit to read value (see console)">
+			</ssv-input>
+			<button click.trigger="submit()">Submit</button>
+		</form>
 	</section>
 
 	<section>
+		<h2>Input variations</h2>
 		<form>
 			<div class="row">
 				<ssv-input label="First Name"
@@ -33,8 +39,9 @@
 				</ssv-input>
 			</div>
 			<div class="row">
-				<ssv-input label="Input with success"
+				<ssv-input label="Input success with help"
 					value="Successful!"
+					help="enter a valid email e.g. john@doe.com"
 					class="success">
 				</ssv-input>
 			</div>
