@@ -1,0 +1,39 @@
+@import "variables";
+
+$nav-active-color: rgba(0, 0, 0, .1);
+$nav-hover-color: $nav-active-color;
+
+nav {
+	display: flex;
+	flex: 1;
+
+	ul {
+		display: flex;
+		list-style: none;
+
+		li {
+			display: flex;
+
+			&.active {
+				a {
+					background-color: $nav-active-color;
+					color: $primary-text-color;
+				}
+			}
+		}
+
+		a {
+			display: flex;
+			align-items: center;
+			text-transform: uppercase;
+			text-decoration: none;
+			padding: 0 1em;
+			color: $secondary-text-color;
+
+			&:hover {
+				background-color: $nav-hover-color;
+				transition: background-color .2s ease-in-out;
+			}
+		}
+	}
+}
