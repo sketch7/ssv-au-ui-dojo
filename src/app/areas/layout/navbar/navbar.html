@@ -6,16 +6,20 @@
 				<i class="fa fa-spinner fa-spin"></i>
 			</span>
 		</div>
-		<ul>
-			<li repeat.for="route of router.navigation" class="${route.isActive ? 'active' : ''}">
-				<a href.bind="route.href">${route.title}</a>
-			</li>
-			<li><a href="#">Features</a></li>
-			<li><a href="#">colors</a></li>
-		</ul>
-		<ul class="right-content">
-			<li class="active"><a href="#">Light</a></li>
-			<li><a href="#">Dark</a></li>
-		</ul>
+		<nav>
+			<ul>
+				<li repeat.for="route of router.navigation" class="${route.isActive ? 'active' : ''}">
+					<a href.bind="route.href">${route.title}</a>
+				</li>
+				<li><a href="#">Features</a></li>
+				<li><a href="#">colors</a></li>
+			</ul>
+		</nav>
+		<nav class="right-content">
+			<ul>
+				<li class="active"><a href="#">Light</a></li>
+				<li><a href="#">Dark</a></li>
+			</ul>
+		</nav>
 	</header>
 </template>
