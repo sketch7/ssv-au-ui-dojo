@@ -6,6 +6,7 @@ export class InputSampleController {
 
 	isDisabled = true;
 	firstName = "Chiko";
+	modifier = "success";
 
 	private logger: ILog;
 

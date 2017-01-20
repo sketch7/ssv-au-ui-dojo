@@ -42,19 +42,27 @@
 				<ssv-input label="Input success with help"
 					value="Successful!"
 					help="enter a valid email e.g. john@doe.com"
-					class="success">
+					modifier="success">
 				</ssv-input>
 			</div>
 			<div class="row">
 				<ssv-input label="Input with error"
 					value="Failure!"
-					class="error">
+					modifier="error">
 				</ssv-input>
 			</div>
 			<div class="row">
 				<ssv-input label="Input with warning"
 					value="Warning!"
-					class="warn">
+					modifier="warn">
+				</ssv-input>
+			</div>
+			<div class="row">
+				<ssv-input 
+					label="I generate my modifiers"
+					value.bind="modifier"
+					help="they can be seprated by space (see element generated css class)."
+					modifier.bind="modifier">
 				</ssv-input>
 			</div>
 		</form>
