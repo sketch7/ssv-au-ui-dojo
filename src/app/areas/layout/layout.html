@@ -2,17 +2,17 @@
 	<app-navbar router.bind="router"></app-navbar>
 	<main>
 		<app-sidenavbar router.bind="router"></app-sidenavbar>
-		<article>
+		<section>
 			<router-view></router-view>
-		</article>
+		</section>
 		<!--<aside class="content-side">Aside 2</aside>-->
 	</main>
-	<footer class="footer">
-		<div class="container">
+	<footer>
+		<div>
 			<p class="text-muted">Hand-crafted &amp; Made with Love &reg;</p>
 		</div>
 		<div class="right-content">
-			<p class="text-muted">Copyright &copy; <strong>sketch7</strong> 2017. All Rights Reserved.</p>
+			<p><span class="text-muted">Copyright &copy; </span><strong class="company-name">sketch7</strong> <span class="text-muted">2017. All Rights Reserved.</span></p>
 		</div>
 	</footer>
 </template>

@@ -22,11 +22,19 @@ body {
 		}
 
 		footer {
+			font-size: .75rem;
 			color: $layout-footer-text-color;
 			background: $layout-footer-bg-color;
 			padding: 0 1em;
 			height: $layout-footer-height-size;
 			display: flex;
+
+			strong {
+				&.company-name {
+					font-family: "Montserrat", sans-serif;
+					font-weight: 300;
+				}
+			}
 
 			div {
 				flex: 1;
@@ -50,8 +58,7 @@ body {
 	min-height: calc(100vh - (#{$layout-header-height-size} + #{$layout-footer-height-size}));
 
 	> {
-		article {
-			// background: purple;
+		section {
 			flex: 4 4;
 		}
 
