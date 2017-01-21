@@ -51,6 +51,15 @@ a {
 	}
 }
 
+ol,
+ul {
+	margin-top: 0;
+	> li {
+		padding-left: 3px;
+		line-height: 24px;
+	}
+}
+
 .text-muted {
 	opacity: .7;
 }
