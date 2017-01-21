@@ -1,11 +1,14 @@
 @import "variables";
-$nav-width-size: $layout-navbar-width-size;
+
+$side-navbar-width-size: $layout-navbar-width-size;
+$side-navbar-text-color: $primary-text-color;
+$side-navbar-bg-color: $secondary-color;
 
 app-sidenavbar {
 	display: flex;
-	min-width: $nav-width-size;
-	max-width: $nav-width-size;
-	background: $secondary-color;
+	min-width: $side-navbar-width-size;
+	max-width: $side-navbar-width-size;
+	background: $side-navbar-bg-color;
 
 	nav {
 		ul {
@@ -16,7 +19,7 @@ app-sidenavbar {
 				flex: 1;
 				height: 30px;
 				padding: .7em 1em;
-				color: $primary-text-color;
+				color: $side-navbar-text-color;
 			}
 		}
 	}

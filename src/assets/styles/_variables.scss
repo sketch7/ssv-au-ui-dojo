@@ -18,6 +18,7 @@ $secondary-color: $fuscous-gray !default;
 $secondary-text-color: $dallas !default;
 $secondary-light-color: lighten($secondary-color, 10%) !default;
 $secondary-lighter-color: lighten($secondary-color, 20%) !default;
+$secondary-dark-color: darken($secondary-color, 10%) !default;
 
 // states
 //$error-color: $darkred !default;
@@ -28,21 +29,5 @@ $secondary-lighter-color: lighten($secondary-color, 20%) !default;
 
 // $secondary-bg-color: $mine-shaft !default;
 
-// splash
-//$splash-bg-color: #efecca;
-$splash-bg-color: lighten($primary-color, 85%) !default;
-$splash-loader-color: $primary-light-color !default;
-
 // navbar
 $layout-navbar-width-size: 250px;
-// $navbar-text-color: $white !default;
-// $navbar-bg-color: $primary-bg-color !default;
-// $navbar-active-bg-color: $primary-color !default;
-// $navbar-active-bg-hover-color: lighten($navbar-active-bg-color, 10%) !default;
-// $navbar-brand-bg-hover-color: transparent !default;
-// $navbar-brand-text-hover-color: darken($navbar-text-color, 10%) !default;
-
-// fonts
-// -----------
-// $body-font-family: 'Open Sans', 'Helvetica Neue', 'Arial', sans-serif;
-$heading-font-family: 'Montserrat', 'Helvetica Neue', 'Arial', sans-serif;

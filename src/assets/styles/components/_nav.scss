@@ -1,7 +1,11 @@
 @import "variables";
 
-$nav-active-color: rgba(0, 0, 0, .1);
-$nav-hover-color: $nav-active-color;
+$nav-text-color: $secondary-text-color !default;
+$nav-text-hover-color: $primary-text-color !default;
+$nav-active-text-color: $primary-text-color !default;
+$nav-active-color: rgba(0, 0, 0, .1) !default;
+$nav-active-hover-color: rgba(0, 0, 0, .2) !default;
+$nav-hover-color: $nav-active-color !default;
 
 nav {
 	display: flex;
@@ -15,9 +19,15 @@ nav {
 			display: flex;
 
 			&.active {
+				&:hover {
+					a {
+						background: $nav-active-hover-color;
+					}
+				}
+
 				a {
 					background-color: $nav-active-color;
-					color: $primary-text-color;
+					color: $nav-active-text-color;
 				}
 			}
 		}
@@ -28,9 +38,12 @@ nav {
 			text-transform: uppercase;
 			text-decoration: none;
 			padding: 0 1em;
-			color: $secondary-text-color;
+			color: $nav-text-color;
 
+			&:active,
+			&:focus,
 			&:hover {
+				color: $nav-text-hover-color;
 				background-color: $nav-hover-color;
 				transition: background-color .2s ease-in-out;
 			}

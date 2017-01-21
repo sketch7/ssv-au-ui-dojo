@@ -1,25 +1,51 @@
 @import "variables";
+
+$link-color: $boston-blue !default;
+$link-hover-color: $picton-blue !default;
+
 body {
 	color: $body-text-color;
-	// font-family: $body-font-family;
 }
 
-h1, h2, h3, h4, h5, h6 {
-	color: $primary-light-color;
-	font-family: $heading-font-family;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: $primary-color;
+}
+
+h1 {
+	font-size: 3rem;
+	font-weight: 300;
+	line-height: 1;
+	letter-spacing: -.04em;
 }
 
 h2 {
-	color: $primary-light-color;
+	font-size: 2.5rem;
+	font-weight: 400;
+	line-height: 1.35;
+	letter-spacing: -.02em;
 }
 
 h3 {
-	color: $primary-lighter-color;
+	font-size: 2rem;
+	font-weight: 400;
+	line-height: 48px;
 }
 
 a {
-	color: $primary-light-color;
+	color: $primary-color;
+	text-shadow: none;
+	color: $link-color;
+	text-decoration: none;
+	outline: 0 !important;
+
+	&:active,
+	&:focus,
 	&:hover {
-		color: $primary-lighter-color;
+		color: $link-hover-color;
 	}
 }
