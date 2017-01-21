@@ -2,6 +2,7 @@
 
 $link-color: $boston-blue !default;
 $link-hover-color: $picton-blue !default;
+$heading-color: $primary-color !default;
 
 body {
 	color: $body-text-color;
@@ -13,7 +14,7 @@ h3,
 h4,
 h5,
 h6 {
-	color: $primary-color;
+	color: $heading-color;
 }
 
 h1 {
