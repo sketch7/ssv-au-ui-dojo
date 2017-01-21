@@ -7,7 +7,10 @@
 	</div>-->
 	<ul>
 		<li repeat.for="component of components">
-			<a route-href="route.bind: componentDetailRoute; params.bind: { component: component.key }">
+			<!--<a route-href="route.bind: componentDetailRoute; params.bind: { component: component.key }">
+				${component.title}
+			</a>-->
+			<a ssv-route-href="route: /components/detail; params.bind: { component: component.key }">
 				${component.title}
 			</a>
 		</li>

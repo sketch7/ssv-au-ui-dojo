@@ -1,8 +1,9 @@
 import { autoinject } from "aurelia-framework";
 import { Router, RouterConfiguration } from "aurelia-router";
-import { ILog, LoggerFactory } from "@ssv/au-core";
+import { ILog, LoggerFactory, RouteMapper } from "@ssv/au-core";
 
-import { AppRouter } from "app/app.router";
+import { shellRoutes } from "app/app.router";
+import { consts } from "app/common";
 
 @autoinject
 export class LayoutController {
@@ -12,7 +13,7 @@ export class LayoutController {
 
 	constructor(
 		loggerFactory: LoggerFactory,
-		private appRouter: AppRouter
+		private routeMapper: RouteMapper
 	) {
 		this.logger = loggerFactory.get("layoutController");
 		this.logger.debug("ctor", "init");
@@ -20,7 +21,10 @@ export class LayoutController {
 
 	configureRouter(config: RouterConfiguration, router: Router) {
 		this.logger.debug("configureRouter");
-		this.appRouter.configure(config);
+		config.options.pushState = true;
+		config.map(shellRoutes);
+		config.mapUnknownRoutes(`${consts.areasBasePath}/error/not-found`);
+		this.routeMapper.map(shellRoutes);
 		this.router = router;
 	}
 }

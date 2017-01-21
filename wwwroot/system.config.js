@@ -36,16 +36,18 @@
 	const ssvPackages = {
 		bundled: [
 			"core",
-			"au-core",
+			// "au-core",
 		],
 		singles: [
-			"au-ui"
+			"au-ui",
+			"au-core",
 		]
 	};
 
 	ssvPackages.bundled.forEach(pkgName => {
 		const name = `@ssv/${pkgName}`;
-		packages[name] = { main: `dist/bundles/ssv-${pkgName}.umd.js`, defaultExtension: "js" };
+		map[name] = `npm:${name}/dist/umd`;
+		packages[name] = { main: `../bundles/ssv-${pkgName}.umd.js`, defaultExtension: "js" };
 	});
 	ssvPackages.singles.forEach(pkgName => {
 		const name = `@ssv/${pkgName}`;

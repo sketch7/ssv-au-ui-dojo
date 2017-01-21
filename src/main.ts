@@ -9,6 +9,7 @@ export function configure(aurelia: Aurelia) {
 		.feature("app/areas", {})
 		.plugin("aurelia-animator-css")
 		.plugin("aurelia-ux")
+		.plugin("@ssv/au-core")
 		.plugin("@ssv/au-ui")
 	;
 
