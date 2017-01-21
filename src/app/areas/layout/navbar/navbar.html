@@ -1,14 +1,17 @@
 <template>
 	<header>
 		<div class="logo">
+			<a href="/">
 			ui<span class="secondary-text"> dojo</span>
 			<span class="loader" if.bind="router.isNavigating">
 				<i class="fa fa-spinner fa-spin"></i>
 			</span>
+			</a>
 		</div>
 		<nav>
 			<ul>
-				<li repeat.for="route of router.navigation" class="${route.isActive ? 'active' : ''}">
+				<li repeat.for="route of router.navigation"
+					class="${route.isActive ? 'active' : ''}">
 					<a href.bind="route.href">${route.title}</a>
 				</li>
 				<li><a href="#">Features</a></li>
