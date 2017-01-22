@@ -38,9 +38,8 @@ h3 {
 }
 
 a {
-	color: $primary-color;
-	text-shadow: none;
 	color: $link-color;
+	text-shadow: none;
 	text-decoration: none;
 	outline: 0 !important;
 
@@ -48,6 +47,15 @@ a {
 	&:focus,
 	&:hover {
 		color: $link-hover-color;
+	}
+}
+
+ol,
+ul {
+	margin-top: 0;
+	> li {
+		padding-left: 3px;
+		line-height: 24px;
 	}
 }
 
