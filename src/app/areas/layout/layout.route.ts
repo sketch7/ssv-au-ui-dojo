@@ -1,6 +1,6 @@
 import { RouteConfig } from "aurelia-router";
 
-import { consts, routes, setRouterDefaults } from "app/common";
+import { consts, routes, setRouteDefaults } from "app/common";
 import { componentRoutes } from "../components/index";
 
 export const shellRoutes: RouteConfig[] = [
@@ -19,4 +19,4 @@ export const shellRoutes: RouteConfig[] = [
 		nav: true,
 		settings: { childRoutes: componentRoutes }
 	}
-].map(x => setRouterDefaults(x));
+].map(x => setRouteDefaults(x));

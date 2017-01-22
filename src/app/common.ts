@@ -10,5 +10,4 @@ export {
 	routes
 };
 
-export { ILog, LoggerFactory, RouteBuilder } from "@ssv/au-core";
-export * from "./app-router.utils";
+export { ILog, LoggerFactory, RouteBuilder, setRouteDefaults } from "@ssv/au-core";
