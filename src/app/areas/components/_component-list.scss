@@ -1,0 +1,10 @@
+@import "variables";
+
+.component-container {
+	h2 {
+		&.title {
+			color: $secondary-color;
+			background-color: rgba($primary-color, 0.3);
+		}
+	}
+}

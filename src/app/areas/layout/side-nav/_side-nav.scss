@@ -1,0 +1,28 @@
+@import "variables";
+
+$side-nav-width-size: $layout-navbar-width-size;
+$side-nav-text-color: $primary-text-color;
+$side-nav-bg-color: $secondary-color;
+
+app-sidenav {
+	display: flex;
+	flex-direction: column;
+	min-width: $side-nav-width-size;
+	max-width: $side-nav-width-size;
+	background: $side-nav-bg-color;
+	box-shadow: 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12), 0 2px 4px -1px rgba(0,0,0,.2);
+
+	nav {
+		ul {
+			flex: 1;
+			flex-direction: column;
+
+			a {
+				flex: 1;
+				height: 30px;
+				padding: .7em 1em;
+				color: $side-nav-text-color;
+			}
+		}
+	}
+}

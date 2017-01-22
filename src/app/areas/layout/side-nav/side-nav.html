@@ -1,0 +1,13 @@
+<template>
+	<nav>
+		<ul>
+			<li if.bind="sideNav.header">
+				<a ssv-route-href="route.bind: sideNav.header.routeName; params.bind: sideNav.header.params">
+					${sideNav.header.label}</a>
+			</li>
+			<li repeat.for="route of sideNav.items">
+				<a ssv-route-href="route.bind: route.routeName; params.bind: route.params">${route.label}</a>
+			</li>
+		</ul>
+	</nav>
+</template>

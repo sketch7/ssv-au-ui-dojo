@@ -1,7 +1,8 @@
 import { autoinject } from "aurelia-framework";
-import { ILog, LoggerFactory } from "@ssv/au-core";
+import { ILog, LoggerFactory, Store } from "@ssv/au-core";
 
 import consts from "./app.const";
+import { AppState, initialState } from "./app.state";
 
 @autoinject
 export class Bootstrapper {
@@ -10,6 +11,7 @@ export class Bootstrapper {
 	private logger: ILog;
 
 	constructor(
+		private store: Store<AppState>,
 		loggerFactory: LoggerFactory
 	) {
 		this.logger = loggerFactory.get("bootstrapper");
@@ -17,8 +19,7 @@ export class Bootstrapper {
 	}
 
 	bootstrap(): void {
-		/*stub*/
+		this.store.initialize(initialState);
 	}
-
 
 }
