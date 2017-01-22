@@ -14,6 +14,5 @@ export class SideNavBarController {
 		loggerFactory: LoggerFactory
 	) {
 		this.logger = loggerFactory.get("sideNavBarController");
-		this.logger.debug("ctor", "init");
 	}
 }

@@ -11,16 +11,16 @@ export class AppConst {
 }
 
 export class RoutesConfig {
-	layout = "layout";
 
 	error = "error";
-	home = `${this.layout}.home`;
+	home = "home";
 
-	componentLayout = `${this.layout}.component-layout`;
+	componentsRoot = "components";
 	components = {
-		main: `${this.layout}.component-list`,
-		detail: `${this.layout}.component-detail`,
+		list: `${this.componentsRoot}.list`,
+		detail: `${this.componentsRoot}.detail`,
 	};
+
 }
 
 export const routes = new RoutesConfig();

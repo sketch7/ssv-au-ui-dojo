@@ -12,7 +12,7 @@ export class ComponentDetailController {
 
 	key: string;
 	component: Component | undefined;
-	componentsRoute = routes.components.main;
+	componentsRoute = routes.components.list;
 
 	private logger: ILog;
 

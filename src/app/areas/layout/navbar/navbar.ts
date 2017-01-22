@@ -24,6 +24,5 @@ export class NavBarController {
 		loggerFactory: LoggerFactory
 	) {
 		this.logger = loggerFactory.get("NavBarController");
-		this.logger.debug("ctor", "init");
 	}
 }

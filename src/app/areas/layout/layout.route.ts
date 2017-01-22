@@ -1,6 +1,7 @@
 import { RouteConfig } from "aurelia-router";
-import { consts, routes } from "app/common";
-import { componentRoutes } from "./areas/components/component.routes";
+
+import { consts, routes, setRouterDefaults } from "app/common";
+import { componentRoutes } from "../components/index";
 
 export const shellRoutes: RouteConfig[] = [
 	{
@@ -13,12 +14,9 @@ export const shellRoutes: RouteConfig[] = [
 	}, {
 		route: "components",
 		title: "Components",
-		// name: routes.componentLayout,
-		name: "/components",
+		name: routes.componentsRoot,
 		moduleId: `${consts.areasBasePath}/components/component-layout`,
 		nav: true,
-		settings: {
-			childRoutes: componentRoutes
-		}
+		settings: { childRoutes: componentRoutes }
 	}
-];
+].map(x => setRouterDefaults(x));
