@@ -1,6 +1,43 @@
 <template>
 	<section>
 		<h2>Simple Usage</h2>
-		<button>Click me</button>
+		<button ssv-button>Button</button>
 	</section>
+
+	<section>
+		<h2>Button Flat</h2>
+		<figure>
+			<button ssv-button>Flat Button</button>
+			<code>
+				type="flat" (default)
+			</code>
+		</figure>
+		<figure>
+			<button ssv-button
+				disabled>Disabled
+			</button>
+			<code>
+				disabled
+			</code>
+		</figure>
+	</section>
+
+	<section>
+		<h2>Button Raised</h2>
+		<figure>
+			<button ssv-button="type: raised">Raised Button</button>
+			<code>
+				type="raised"
+			</code>
+		</figure>
+		<figure>
+			<button ssv-button="type: raised"
+				disabled>Disabled
+			</button>
+			<code>
+				disabled
+			</code>
+		</figure>
+	</section>
+
 </template>
