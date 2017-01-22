@@ -6,3 +6,4 @@ bower_components
 
 _artifact
 **/wwwroot/dist
+**/wwwroot/index.html
