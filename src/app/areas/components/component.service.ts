@@ -1,6 +1,7 @@
 import { autoinject } from "aurelia-framework";
+import { RouteLink } from "@ssv/au-core";
 
-import { _ } from "app/common";
+import { _, routes } from "app/common";
 import { Component } from "./component.model";
 
 @autoinject
@@ -10,6 +11,8 @@ export class ComponentService {
 		{ title: "Input", key: "input", },
 		{ title: "Button", key: "button" }
 	];
+
+	private routes: RouteLink[] = [];
 
 	getAll(): Component[] {
 		return this.components;
@@ -22,5 +25,21 @@ export class ComponentService {
 	count(): number {
 		return this.components.length;
 	}
+
+	getRoutes(): RouteLink[] {
+		if (this.routes.length > 0) {
+			return this.routes;
+		}
+
+		for (let component of this.components) {
+			this.routes.push({
+				label: component.title,
+				routeName: routes.components.detail,
+				params: { component: component.key }
+			});
+		}
+
+		return this.routes;
+	};
 
 }

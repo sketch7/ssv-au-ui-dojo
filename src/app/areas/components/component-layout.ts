@@ -1,8 +1,11 @@
 import { autoinject } from "aurelia-framework";
 import { RouterConfiguration } from "aurelia-router";
-import { ILog, LoggerFactory } from "@ssv/au-core";
+import { ILog, LoggerFactory, Store } from "@ssv/au-core";
 
+import { AppState } from "app/app.state";
+import { SideNavState } from "app/areas/layout/side-nav/index";
 import { componentRoutes } from "./component.route";
+import { ComponentService } from "./component.service";
 
 @autoinject
 export class ComponentsLayoutController {
@@ -10,9 +13,17 @@ export class ComponentsLayoutController {
 	private logger: ILog;
 
 	constructor(
+		private store: Store<AppState>,
+		private service: ComponentService,
 		loggerFactory: LoggerFactory
 	) {
 		this.logger = loggerFactory.get("componentsLayoutController");
+	}
+
+	activate() {
+		this.store.set<SideNavState>("sideNav", {
+			items: this.service.getRoutes()
+		});
 	}
 
 	configureRouter(config: RouterConfiguration) {
