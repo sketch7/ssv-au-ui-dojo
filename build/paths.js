@@ -29,6 +29,7 @@ module.exports = {
 			"./src/assets/styles",
 			"./node_modules/@ssv/au-ui/dist/sass",
 			"./node_modules/normalize-scss/sass",
+			"./node_modules/node-waves/src/scss",
 		]
 	},
 	doc: "./doc",

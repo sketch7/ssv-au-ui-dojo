@@ -20,6 +20,7 @@
 		"@ssv": "npm:@ssv",
 		"lodash": "npm:lodash",
 		"bluebird": "npm:bluebird",
+		"node-waves": "npm:node-waves/dist",
 		"fuse": "npm:fuse.js/src",
 	};
 
@@ -29,6 +30,7 @@
 		"rxjs": { defaultExtension: "js" },
 		"fuse": { main: "fuse.js" },
 		"lodash": { main: "index.js" },
+		"node-waves": { main: "waves.js" },
 		"bluebird": { main: "js/release/bluebird.js" },
 	};
 

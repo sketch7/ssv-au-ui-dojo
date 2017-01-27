@@ -27,6 +27,7 @@
     "bluebird": "^3.4.7",
     "font-awesome": "^4.7.0",
     "lodash": "^4.17.4",
+    "node-waves": "^0.7.5",
     "normalize-scss": "^6.0.0",
     "systemjs": "^0.19.43"
   },
