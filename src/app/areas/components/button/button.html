@@ -1,43 +1,70 @@
 <template>
-	<section>
-		<h2>Simple Usage</h2>
-		<button ssv-button>Button</button>
-	</section>
+	<div class="component component-button">
+		<section>
+			<h2>Simple Usage</h2>
+			<button ssv-button>Button</button>
+		</section>
 
-	<section>
-		<h2>Button Flat</h2>
-		<figure>
-			<button ssv-button>Flat Button</button>
-			<code>
+		<section>
+			<h2>Button Flat</h2>
+			<figure>
+				<button ssv-button>Flat Button</button>
+				<code>
 				type="flat" (default)
 			</code>
-		</figure>
-		<figure>
-			<button ssv-button
-				disabled>Disabled
+			</figure>
+			<figure>
+				<button ssv-button
+					disabled>Disabled
 			</button>
-			<code>
+				<code>
 				disabled
 			</code>
-		</figure>
-	</section>
+			</figure>
+		</section>
 
-	<section>
-		<h2>Button Raised</h2>
-		<figure>
-			<button ssv-button="type: raised">Raised Button</button>
-			<code>
+		<section>
+			<h2>Button Raised</h2>
+			<figure>
+				<button ssv-button="type: raised">Raised Button</button>
+				<code>
 				type="raised"
 			</code>
-		</figure>
-		<figure>
-			<button ssv-button="type: raised"
-				disabled>Disabled
+			</figure>
+			<figure>
+				<button ssv-button="type: raised"
+					disabled>Disabled
 			</button>
-			<code>
+				<code>
 				disabled
 			</code>
-		</figure>
-	</section>
+			</figure>
+		</section>
 
+		<section>
+			<h2>Waves</h2>
+			<figure>
+				<button ssv-waves>Ripple Button</button>
+				<code>
+				ssv-waves
+			</code>
+			</figure>
+			<figure>
+				<div ssv-waves="waves-brown"
+					class="fancy-box">Ripple</div>
+				<code>
+				ssv-waves="waves-light"
+			</code>
+			</figure>
+			<figure>
+				<img src="https://s-media-cache-ak0.pinimg.com/736x/a6/a9/79/a6a9797721eccc27d420ce8ec1897f79.jpg"
+				ssv-waves="waves-light"
+				class="img-thumb"
+				 />
+				<code>
+				ssv-waves="waves-light"
+			</code>
+			</figure>
+		</section>
+	</div>
 </template>
