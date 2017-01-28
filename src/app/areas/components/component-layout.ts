@@ -3,7 +3,6 @@ import { RouterConfiguration } from "aurelia-router";
 import { ILog, LoggerFactory, Store } from "@ssv/au-core";
 
 import { AppState } from "app/app.state";
-import { SideNavState } from "app/areas/layout/side-nav/index";
 import { componentRoutes } from "./component.route";
 import { ComponentService } from "./component.service";
 
@@ -21,7 +20,7 @@ export class ComponentsLayoutController {
 	}
 
 	activate() {
-		this.store.set<SideNavState>("sideNav", {
+		this.store.set("sideNav", {
 			items: this.service.getRoutes()
 		});
 	}

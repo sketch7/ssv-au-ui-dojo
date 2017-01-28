@@ -21,7 +21,7 @@ export class SideNavController {
 	}
 
 	attached() {
-		this.subscription$$ = this.store.subscribe<SideNavState>("sideNav", x => this.sideNav = x);
+		this.subscription$$ = this.store.subscribe("sideNav", x => this.sideNav = x);
 	}
 
 	unattached() {
