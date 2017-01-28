@@ -9,7 +9,8 @@ export class ComponentService {
 
 	private components: Component[] = [
 		{ title: "Input", key: "input", },
-		{ title: "Button", key: "button" }
+		{ title: "Button", key: "button" },
+		{ title: "Waves", key: "waves" },
 	];
 
 	private routes: RouteLink[] = [];
