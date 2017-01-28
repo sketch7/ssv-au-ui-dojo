@@ -3,7 +3,6 @@ import { ILog, LoggerFactory, Store } from "@ssv/au-core";
 
 import { consts } from "app/common";
 import { AppState } from "app/app.state";
-import { SideNavState } from "app/areas/layout/side-nav/index";
 
 @autoinject
 export class HomeController {
@@ -20,7 +19,7 @@ export class HomeController {
 	}
 
 	activate() {
-		this.store.set<SideNavState>("sideNav", { items: [] });
+		this.store.set("sideNav", { items: [] });
 	}
 
 }
