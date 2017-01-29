@@ -22,6 +22,7 @@
 		"bluebird": "npm:bluebird",
 		"node-waves": "npm:node-waves/dist",
 		"fuse": "npm:fuse.js/src",
+		"prismjs": "npm:prismjs",
 	};
 
 	// packages tells the System loader how to load when no filename and/or no extension
@@ -32,6 +33,7 @@
 		"lodash": { main: "index.js" },
 		"node-waves": { main: "waves.js" },
 		"bluebird": { main: "js/release/bluebird.js" },
+		"prismjs": { main: "prism.js" }
 	};
 
 	// ssv

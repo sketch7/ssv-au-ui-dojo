@@ -1,187 +1,41 @@
 <template>
 	<div class="component component-button">
 		<section>
-			<h2>Simple Usage</h2>
-			<button ssv-button>Button</button>
-		</section>
+			<h3>basic</h3>
+			<button ssv-button>default</button>
+			<pre><code class="language-html" ssv-syntax>&lt;button ssv-button&gt;default&lt;/button&gt;</code></pre>
 
-		<section>
-			<h2>Flat</h2>
-			<figure>
-				<button ssv-button>Flat Button</button>
-				<code>
-					type="flat" (default)
-				</code>
-			</figure>
-			<figure>
-				<button ssv-button="disable-ripple: true">Flat Button</button>
-				<code>
-				disable-ripple: true
-			</code>
-			</figure>
-			<figure>
-				<button ssv-button
-					disabled>
-					Disabled
-			</button>
-				<code>
-				disabled
-			</code>
-			</figure>
-		</section>
+			<h3>changing attribute: <strong>type</strong></h3>
+			<button ssv-button="type:outline">outline</button>
+			<pre><code class="language-html" ssv-syntax>&lt;button ssv-button="type: outline"&gt;outline&lt;/button&gt;</code></pre>
 
-		
-		<section>
-			<h2>Flat Color</h2>
-			<figure>
-				<button ssv-button="type: flat; color: primary">Primary</button>
-				<code>
-					type: flat; color: primary
-				</code>
-			</figure>
-			<figure>
-				<button ssv-button="type: flat; color: accent">Accent</button>
-				<code>
-					type: flat; color: accent
-				</code>
-			</figure>
-			<figure>
-				<button ssv-button="type: flat; color: danger">Danger</button>
-				<code>
-					type: flat; color: danger
-				</code>
-			</figure>
-			<figure>
-				<button ssv-button="type: flat; color: warn">Warn</button>
-				<code>
-					type: flat; color: warn
-				</code>
-			</figure>
-			<figure>
-				<button ssv-button="type: flat; color: success">Success</button>
-				<code>
-					type: flat; color: success
-				</code>
+			<h3>changing attribute: <strong>color</strong></h3>
+			<button ssv-button="color: primary">primary</button>
+			<pre><code class="language-html" ssv-syntax>&lt;button ssv-button="color: primary"&gt;primary&lt;/button&gt;</code></pre>
+
+			<h3>changing attribute: <strong>disable-ripple</strong></h3>
+			<button ssv-button="disable-ripple: true">disable-ripple</button>
+			<pre><code class="language-html" ssv-syntax>&lt;button ssv-button="disable-ripple: true"&gt;disable-ripple&lt;/button&gt;</code></pre>
+
+			<h3>changing attribute: <strong>disabled</strong></h3>
+			<button ssv-button disabled>disabled</button>
+			<pre><code class="language-html" ssv-syntax>&lt;button ssv-button disabled&gt;default&lt;/button&gt;</code></pre>
+		</section>
+		<section repeat.for="buttonType of buttonTypes">
+			<h3>type <strong>${buttonType}</strong></h3>
+			<figure repeat.for="color of colors">
+				<div class="row">
+					<div>
+						<button ssv-button="type.bind: buttonType; color.bind: color">${color ? color : 'default'}</button>
+					</div>
+					<div>
+						<button ssv-button="type.bind: buttonType; color.bind: color; disable-ripple: true">disable-ripple</button>
+					</div>
+					<div>
+						<button ssv-button="type.bind: buttonType; color.bind: color" disabled>disabled</button>
+					</div>
+				</div>
 			</figure>
 		</section>
-
-		<section>
-			<h2>Raised</h2>
-			<figure>
-				<button ssv-button="type: raised">Raised Button</button>
-				<code>
-					type="raised"
-				</code>
-			</figure>
-			<figure>
-				<button ssv-button="type: raised; disable-ripple: true">Raised Button</button>
-				<code>
-					type: raised; disable-ripple: true
-				</code>
-			</figure>
-			<figure>
-				<button ssv-button="type: raised"
-					disabled>
-					Disabled
-				</button>
-				<code>
-					disabled
-				</code>
-			</figure>
-		</section>
-
-		<section>
-			<h2>Raised Color</h2>
-			<figure>
-				<button ssv-button="type: raised; color: primary">Primary</button>
-				<code>
-					type: raised; color: primary
-				</code>
-			</figure>
-			<figure>
-				<button ssv-button="type: raised; color: accent">Accent</button>
-				<code>
-					type: raised; color: accent
-				</code>
-			</figure>
-			<figure>
-				<button ssv-button="type: raised; color: danger">Danger</button>
-				<code>
-					type: raised; color: danger
-				</code>
-			</figure>
-			<figure>
-				<button ssv-button="type: raised; color: warn">Warn</button>
-				<code>
-					type: raised; color: warn
-				</code>
-			</figure>
-			<figure>
-				<button ssv-button="type: raised; color: success">Success</button>
-				<code>
-					type: raised; color: success
-				</code>
-			</figure>
-		</section>
-
-		<section>
-			<h2>Outline</h2>
-			<figure>
-				<button ssv-button="type: outline">Outline Button</button>
-				<code>
-					type="outline"
-				</code>
-			</figure>
-			<figure>
-				<button ssv-button="type: outline; disable-ripple: true">Outline Button</button>
-				<code>
-					type: outline; disable-ripple: true
-				</code>
-			</figure>
-			<figure>
-				<button ssv-button="type: outline"
-					disabled>
-					Disabled
-				</button>
-				<code>
-					disabled
-				</code>
-			</figure>
-		</section>
-
-		<section>
-			<h2>Outline Color</h2>
-			<figure>
-				<button ssv-button="type: outline; color: primary">Primary</button>
-				<code>
-					type: outline; color: primary
-				</code>
-			</figure>
-			<figure>
-				<button ssv-button="type: outline; color: accent">Accent</button>
-				<code>
-					type: outline; color: accent
-				</code>
-			</figure>
-			<figure>
-				<button ssv-button="type: outline; color: danger">Danger</button>
-				<code>
-					type: outline; color: danger
-				</code>
-			</figure>
-			<figure>
-				<button ssv-button="type: outline; color: warn">Warn</button>
-				<code>
-					type: outline; color: warn
-				</code>
-			</figure>
-			<figure>
-				<button ssv-button="type: outline; color: success">Success</button>
-				<code>
-					type: outline; color: success
-				</code>
-			</figure>
-		</section>
-
 	</div>
 </template>

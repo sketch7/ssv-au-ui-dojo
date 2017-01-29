@@ -20,6 +20,7 @@
     "@ssv/core": "^0.3.3",
     "@types/bluebird": "^3.0.37",
     "@types/lodash": "^4.14.50",
+    "@types/prismjs": "^1.4.18",
     "aurelia-animator-css": "^1.0.1",
     "aurelia-bootstrapper": "^2.0.1",
     "aurelia-router": "^1.1.1",
@@ -29,6 +30,7 @@
     "lodash": "^4.17.4",
     "node-waves": "^0.7.5",
     "normalize-scss": "^6.0.0",
+    "prismjs": "^1.6.0",
     "systemjs": "^0.19.43"
   },
   "devDependencies": {
