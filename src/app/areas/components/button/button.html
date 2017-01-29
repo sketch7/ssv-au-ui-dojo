@@ -20,6 +20,15 @@
 			<h3>changing attribute: <strong>disabled</strong></h3>
 			<button ssv-button disabled>disabled</button>
 			<pre><code class="language-html" ssv-syntax>&lt;button ssv-button disabled&gt;default&lt;/button&gt;</code></pre>
+			
+			<h3>changing attribute: <strong>size</strong></h3>
+			<button ssv-button="size:small">small</button>
+			<button ssv-button="size:medium">medium</button>
+			<button ssv-button="size:large">large</button>
+			<pre><code class="language-html" ssv-syntax>&lt;button ssv-button="size: small"&gt;small&lt;/button&gt;
+&lt;button ssv-button="size: medium"&gt;medium&lt;/button&gt;
+&lt;button ssv-button="size: large"&gt;large&lt;/button&gt;</code></pre>
+
 		</section>
 		<section repeat.for="buttonType of buttonTypes">
 			<h3>type <strong>${buttonType}</strong></h3>
