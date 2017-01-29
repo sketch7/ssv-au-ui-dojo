@@ -1,26 +1,18 @@
 <template>
 	<div class="component component-waves">
 		<section>
-			<h2>Simple Usage</h2>
+			<h2>basic</h2>
 			<button ssv-waves>Ripple Button</button>
+			<pre><code class="language-html" ssv-syntax>&lt;button ssv-waves&gt;Ripple Button&lt;/button&gt;</code></pre>
 		</section>
 		<section>
-			<h2>Divs and Images</h2>
-			<figure>
-				<div ssv-waves
-					class="fancy-box">Ripple</div>
-				<code>
-				ssv-waves
-			</code>
-			</figure>
-			<figure>
-				<img src="https://s-media-cache-ak0.pinimg.com/736x/a6/a9/79/a6a9797721eccc27d420ce8ec1897f79.jpg"
-					ssv-waves="waves-light"
-					class="img-thumb" />
-				<code>
-				ssv-waves="waves-light"
-			</code>
-			</figure>
+			<h2>div</h2>
+			<div ssv-waves class="fancy-box">Ripple</div>
+			<pre><code class="language-html" ssv-syntax>&lt;div ssv-waves class="fancy-box"&gt;Ripple&lt;/div&gt;</code></pre>
+			<h2>image</h2>
+			<img src="https://s-media-cache-ak0.pinimg.com/736x/a6/a9/79/a6a9797721eccc27d420ce8ec1897f79.jpg" ssv-waves="waves-light"
+				class="img-thumb" />
+			<pre><code class="language-html" ssv-syntax>&lt;img src="dino.jpg" ssv-waves="waves-light" class="img-thumb" /&gt;</code></pre>
 		</section>
 	</div>
 </template>
