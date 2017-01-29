@@ -64,7 +64,7 @@ body {
 			flex: 4 4;
 		}
 
-		app-sidenavbar nav,
+		app-sidenav nav,
 		aside {
 			flex: 1;
 		}
@@ -85,7 +85,7 @@ body {
 		main {
 			flex-direction: column;
 
-			> app-sidenavbar {
+			> app-sidenav {
 				max-width: inherit;
 
 				nav {
