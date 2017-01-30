@@ -7,7 +7,7 @@
 				type="text"
 				help="press submit to read value (see console)">
 			</ssv-input>
-			<button click.trigger="submit()">Submit</button>
+			<button ssv-button="primary" click.trigger="submit()">Submit</button>
 			<pre><code class="language-html" ssv-syntax>&lt;ssv-input label="First name"
 	value.bind="Chiko"
 	type="text"
@@ -43,7 +43,7 @@
 					value="I am not editable and disable is bound"
 					disabled.bind="isDisabled">
 				</ssv-input>
-				<button click.trigger="toggleDisable()">${isDisabled ? "enable" : "disable"}</button>
+				<button ssv-button click.trigger="toggleDisable()">${isDisabled ? "enable" : "disable"}</button>
 				<pre><code class="language-html" ssv-syntax>&lt;ssv-input label="Bound Disabled"
 	value="I am not editable and disable is bound"
 	disabled.bind="isDisabled"&gt;
