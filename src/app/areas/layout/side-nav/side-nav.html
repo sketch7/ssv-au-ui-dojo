@@ -1,11 +1,15 @@
 <template>
 	<nav>
 		<ul>
-			<li if.bind="sideNav.header" ssv-route-active="route.bind: sideNav.header.routeName; params.bind: sideNav.header.params">
+			<li if.bind="sideNav.header"
+				ssv-waves
+				ssv-route-active="route.bind: sideNav.header.routeName; params.bind: sideNav.header.params">
 				<a ssv-route-href="route.bind: sideNav.header.routeName; params.bind: sideNav.header.params">
 					${sideNav.header.label}</a>
 			</li>
-			<li repeat.for="route of sideNav.items" ssv-route-active="route.bind: route.routeName; params.bind: route.params">
+			<li repeat.for="route of sideNav.items"
+				ssv-waves
+				ssv-route-active="route.bind: route.routeName; params.bind: route.params">
 				<a ssv-route-href="route.bind: route.routeName; params.bind: route.params">${route.label}</a>
 			</li>
 		</ul>

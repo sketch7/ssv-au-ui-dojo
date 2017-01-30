@@ -18,9 +18,13 @@ nav {
 		margin: 0;
 
 		li {
-			display: flex;
 			padding: 0;
 			margin: 0;
+
+			&,
+			&.ssv-waves {
+				display: flex;
+			}
 
 			&.active {
 				&:hover {

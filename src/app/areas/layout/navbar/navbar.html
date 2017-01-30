@@ -11,6 +11,7 @@
 		<nav>
 			<ul>
 				<li repeat.for="route of router.navigation"
+					ssv-waves="waves-light"
 					class="${route.isActive ? 'active' : ''}">
 					<a href.bind="route.href">${route.title}</a>
 				</li>
