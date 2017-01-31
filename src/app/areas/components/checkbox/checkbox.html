@@ -1,0 +1,13 @@
+<template>
+	<div class="component component-checkbox">
+		<section>
+			<h2>basic</h2>
+			<ssv-checkbox label="Tick me!"
+				value.bind="isTicked">
+			</ssv-checkbox>
+			<div>
+				State <strong>${isTicked ? "Ticked" : "Unticked"}</strong>
+			</div>
+		</section>
+	</div>
+</template>
