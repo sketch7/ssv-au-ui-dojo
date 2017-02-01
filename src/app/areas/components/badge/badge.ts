@@ -5,7 +5,7 @@ import { supportedBadgeTypes } from "@ssv/au-ui";
 export class BadgeSampleController {
 
 	badgeTypes: string[];
-	colors = [null, "primary", "accent", "danger", "warn", "success"];
+	colors = [null, "primary", "accent", "danger", "warn", "success", "info"];
 
 	activate() {
 		this.badgeTypes = supportedBadgeTypes;
