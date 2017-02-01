@@ -1,0 +1,26 @@
+<template>
+	<section>
+		<h2>basic</h2>
+		<ssv-badge>hello</ssv-badge>
+		<pre><code class="language-html" ssv-syntax>&lt;ssv-badge&gt;hello&lt;/ssv-badge&gt;</code></pre>
+
+		<h2>attributes</h2>
+		<h3>type</h3>
+		<ssv-badge type="rounded">23</ssv-badge>
+		<pre><code class="language-html" ssv-syntax>&lt;ssv-badge type="rounded"&gt;23&lt;/ssv-badge&gt;</code></pre>
+
+		<h3>color</h3>
+		<ssv-badge color="primary">23</ssv-badge>
+		<ssv-badge type="rounded" color="danger">42</ssv-badge>
+		<pre><code class="language-html" ssv-syntax>&lt;ssv-badge color="primary"&gt;23&lt;/ssv-badge&gt;
+&lt;ssv-badge type="rounded" color="danger"&gt;42&lt;/ssv-badge&gt;</code></pre>
+	</section>
+
+	<h2>variants</h2>
+	<section repeat.for="buttonType of badgeTypes">
+		<h3>type <strong>${buttonType}</strong></h2>
+			<figure repeat.for="color of colors">
+				<ssv-badge type.bind="buttonType" color.bind="color">${color ? color : 'default'}</ssv-badge>
+			</figure>
+	</section>
+</template>
