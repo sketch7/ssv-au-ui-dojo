@@ -3,10 +3,32 @@
 		<section>
 			<h2>basic</h2>
 			<ssv-checkbox label="Tick me!"
-				value.bind="isTicked">
+				checked.bind="isTicked">
 			</ssv-checkbox>
 			<div>
 				State <strong>${isTicked ? "Ticked" : "Unticked"}</strong>
+			</div>
+		</section>
+
+		<section>
+			<h2>disabled</h2>
+			<div>
+				<ssv-checkbox label="Disabled Ticked"
+					checked
+					disabled>
+				</ssv-checkbox>
+				<ssv-checkbox label="Disabled Unticked"
+					disabled>
+				</ssv-checkbox>
+			</div>
+			<h2>disabled bind</h2>
+			<div>
+				<ssv-checkbox label="I can be disabled"
+					disabled.bind="isDisabled">
+				</ssv-checkbox>
+				<ssv-checkbox label="Disable the other"
+					checked.bind="isDisabled">
+				</ssv-checkbox>
 			</div>
 		</section>
 	</div>

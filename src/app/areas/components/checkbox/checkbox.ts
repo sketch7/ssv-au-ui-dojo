@@ -4,6 +4,7 @@ import { autoinject } from "aurelia-framework";
 export class CheckboxSampleController {
 
 	isTicked = false;
+	isDisabled = false;
 	colors = [null, "primary", "accent", "danger", "warn", "success"];
 
 }
