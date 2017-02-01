@@ -17,10 +17,10 @@
 	</section>
 
 	<h2>variants</h2>
-	<section repeat.for="buttonType of badgeTypes">
-		<h3>type <strong>${buttonType}</strong></h2>
-			<figure repeat.for="color of colors">
-				<ssv-badge type.bind="buttonType" color.bind="color">${color ? color : 'default'}</ssv-badge>
-			</figure>
+	<section repeat.for="type of types">
+		<h3>type <strong>${type}</strong></h3>
+		<figure repeat.for="color of colors">
+			<ssv-badge type.bind="type" color.bind="color">${color ? color : 'default'}</ssv-badge>
+		</figure>
 	</section>
 </template>

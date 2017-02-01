@@ -4,11 +4,7 @@ import { supportedButtonTypes } from "@ssv/au-ui";
 @autoinject
 export class ButtonSampleController {
 
-	buttonTypes: string[];
+	types: string[] = supportedButtonTypes;
 	colors = [null, "primary", "accent", "danger", "warn", "success"];
-
-	activate() {
-		this.buttonTypes = supportedButtonTypes;
-	}
 
 }
