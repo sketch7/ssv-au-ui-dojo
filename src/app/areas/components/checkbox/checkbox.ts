@@ -7,4 +7,6 @@ export class CheckboxSampleController {
 	isDisabled = false;
 	colors = [null, "primary", "accent", "danger", "warn", "success"];
 
+	types = ["default"];
+
 }

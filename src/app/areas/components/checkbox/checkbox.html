@@ -32,4 +32,31 @@
 			</div>
 		</section>
 	</div>
+	<section>
+		<h2>variations</h2>
+		<section repeat.for="type of types">
+			<h3>type <strong>${type}</strong></h3>
+			<figure repeat.for="color of colors">
+				<div class="row">
+					<h4>${color}</h4>
+					<div>
+						<ssv-checkbox color.bind="color" label="Unticked">
+						</ssv-checkbox>
+					</div>
+					<div>
+						<ssv-checkbox color.bind="color" label="Ticked" checked>
+						</ssv-checkbox>
+					</div>
+					<div>
+						<ssv-checkbox color.bind="color" label="Unticked Disabled" disabled>
+						</ssv-checkbox>
+					</div>
+					<div>
+						<ssv-checkbox color.bind="color" label="Ticked Disabled" checked disabled>
+						</ssv-checkbox>
+					</div>
+				</div>
+			</figure>
+		</section>
+	</section>
 </template>
