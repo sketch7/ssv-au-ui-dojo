@@ -53,6 +53,7 @@ a {
 ol,
 ul {
 	margin-top: 0;
+
 	> li {
 		padding-left: 3px;
 		line-height: 24px;
@@ -61,4 +62,9 @@ ul {
 
 .text-muted {
 	opacity: .7;
+}
+
+b,
+strong {
+	font-weight: 500;
 }
