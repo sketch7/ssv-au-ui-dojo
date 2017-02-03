@@ -1,16 +1,10 @@
 import { autoinject } from "aurelia-framework";
-import { buttonType } from "@ssv/au-ui";
-
-import { _ } from "app/common";
+import { supportedButtonTypes } from "@ssv/au-ui";
 
 @autoinject
 export class ButtonSampleController {
 
-	buttonTypes: string[];
+	types: string[] = supportedButtonTypes;
 	colors = [null, "primary", "accent", "danger", "warn", "success"];
-
-	activate() {
-		this.buttonTypes = _.values<string>(buttonType);
-	}
 
 }

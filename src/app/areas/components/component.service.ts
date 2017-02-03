@@ -11,13 +11,14 @@ export class ComponentService {
 		{ title: "Input", key: "input", },
 		{ title: "Button", key: "button" },
 		{ title: "Waves", key: "waves" },
+		{ title: "Badge", key: "badge" },
 		{ title: "Checkbox", key: "checkbox", },
 	];
 
 	private routes: RouteLink[] = [];
 
 	getAll(): Component[] {
-		return this.components;
+		return _.orderBy(this.components, x => x.title);
 	}
 
 	getByKey(key: string): Component | undefined {
@@ -33,7 +34,8 @@ export class ComponentService {
 			return this.routes;
 		}
 
-		for (let component of this.components) {
+		const components = this.getAll();
+		for (let component of components) {
 			this.routes.push({
 				label: component.title,
 				routeName: routes.components.detail,

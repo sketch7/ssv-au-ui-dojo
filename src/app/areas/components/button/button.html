@@ -26,7 +26,7 @@
 			<h3>disabled</h3>
 			<button ssv-button disabled>disabled</button>
 			<pre><code class="language-html" ssv-syntax>&lt;button ssv-button disabled&gt;default&lt;/button&gt;</code></pre>
-			
+
 			<h3>sizes</h3>
 			<button ssv-button="size:small">small</button>
 			<button ssv-button="size:medium">medium</button>
@@ -37,18 +37,18 @@
 
 		</section>
 		<h2>variants</h2>
-		<section repeat.for="buttonType of buttonTypes">
-			<h3>type <strong>${buttonType}</strong></h2>
+		<section repeat.for="type of types">
+			<h3>type <strong>${type}</strong></h3>
 			<figure repeat.for="color of colors">
 				<div class="row">
 					<div>
-						<button ssv-button="type.bind: buttonType; color.bind: color">${color ? color : 'default'}</button>
+						<button ssv-button="type.bind: type; color.bind: color">${color ? color : 'default'}</button>
 					</div>
 					<div>
-						<button ssv-button="type.bind: buttonType; color.bind: color; disable-ripple: true">disable-ripple</button>
+						<button ssv-button="type.bind: type; color.bind: color; disable-ripple: true">disable-ripple</button>
 					</div>
 					<div>
-						<button ssv-button="type.bind: buttonType; color.bind: color" disabled>disabled</button>
+						<button ssv-button="type.bind: type; color.bind: color" disabled>disabled</button>
 					</div>
 				</div>
 			</figure>
