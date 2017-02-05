@@ -4,7 +4,7 @@ import { customAttribute } from "aurelia-templating";
 
 @autoinject
 @customAttribute("ssv-syntax")
-export class RouteActiveAttribute {
+export class SyntaxHighlighterAttribute {
 
 	constructor(
 		private element: Element
