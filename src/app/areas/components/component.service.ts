@@ -12,6 +12,7 @@ export class ComponentService {
 		{ title: "Button", key: "button" },
 		{ title: "Waves", key: "waves" },
 		{ title: "Badge", key: "badge" },
+		{ title: "Icon", key: "icon" },
 	];
 
 	private routes: RouteLink[] = [];
