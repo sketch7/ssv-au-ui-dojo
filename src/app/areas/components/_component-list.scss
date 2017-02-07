@@ -8,3 +8,17 @@
 		}
 	}
 }
+
+.component {
+	.row {
+		display: flex;
+
+		h4 {
+			flex: 0.5;
+		}
+
+		div {
+			flex: 1;
+		}
+	}
+}

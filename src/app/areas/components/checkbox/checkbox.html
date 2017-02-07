@@ -2,8 +2,7 @@
 	<div class="component component-checkbox">
 		<section>
 			<h2>basic</h2>
-			<ssv-checkbox label="Tick me!"
-				checked.bind="isTicked">
+			<ssv-checkbox label="Tick me!" checked.bind="isTicked">
 			</ssv-checkbox>
 			<div>
 				State <strong>${isTicked ? "Ticked" : "Unticked"}</strong>
@@ -13,63 +12,65 @@
 		<section>
 			<h2>disabled states</h2>
 			<div>
-				<ssv-checkbox label="Disabled Ticked"
-					checked
-					disabled>
+				<ssv-checkbox label="Disabled Ticked" checked disabled>
 				</ssv-checkbox>
-				<ssv-checkbox label="Disabled Unticked"
-					disabled>
+				<ssv-checkbox label="Disabled Unticked" disabled>
 				</ssv-checkbox>
 			</div>
 			<h2>disabled bind</h2>
 			<div>
-				<ssv-checkbox label="I can be disabled"
-					disabled.bind="isDisabled">
+				<ssv-checkbox label="I can be disabled" disabled.bind="isDisabled">
 				</ssv-checkbox>
-				<ssv-checkbox label="Disable the other"
-					checked.bind="isDisabled">
+				<ssv-checkbox label="Disable the other" checked.bind="isDisabled">
 				</ssv-checkbox>
 			</div>
 			<h2>label position</h2>
 			<div>
-				<ssv-checkbox label="label before"
-					label-position="before">
+				<h3>minimal</h3>
+				<ssv-checkbox label="label before" label-position="before" type="minimal">
 				</ssv-checkbox>
-				<ssv-checkbox label="label before disabled"
-					label-position="before"
-					disabled>
+				<ssv-checkbox label="label before disabled" label-position="before" disabled type="minimal">
 				</ssv-checkbox>
-				<ssv-checkbox label="label after"
-					label-position="after">
+				<ssv-checkbox label="label after" label-position="after" type="minimal">
+				</ssv-checkbox>
+			</div>
+			<div>
+				<h3>filled</h3>
+				<ssv-checkbox label="label before" label-position="before" type="filled">
+				</ssv-checkbox>
+				<ssv-checkbox label="label before disabled" label-position="before" disabled type="filled">
+				</ssv-checkbox>
+				<ssv-checkbox label="label after" label-position="after" type="filled">
 				</ssv-checkbox>
 			</div>
 		</section>
-	</div>
-	<section>
-		<h2>variations</h2>
-		<section repeat.for="type of types">
-			<h3>type <strong>${type}</strong></h3>
-			<figure repeat.for="color of colors">
-				<div class="row">
-					<h4>${color}</h4>
-					<div>
-						<ssv-checkbox color.bind="color" label="Unticked">
-						</ssv-checkbox>
+
+		<section>
+			<h2>variations</h2>
+			<section repeat.for="type of types">
+				<h3>type <strong>${type}</strong></h3>
+				<figure repeat.for="color of colors">
+					<div class="row">
+						<h4>${color ? color : "default"}</h4>
+						<div>
+							<ssv-checkbox color.bind="color" type.bind="type" label="Unticked">
+							</ssv-checkbox>
+						</div>
+						<div>
+							<ssv-checkbox color.bind="color" type.bind="type" label="Ticked" checked>
+							</ssv-checkbox>
+						</div>
+						<div>
+							<ssv-checkbox color.bind="color" type.bind="type" label="Unticked Disabled" disabled>
+							</ssv-checkbox>
+						</div>
+						<div>
+							<ssv-checkbox color.bind="color" type.bind="type" label="Ticked Disabled" checked disabled>
+							</ssv-checkbox>
+						</div>
 					</div>
-					<div>
-						<ssv-checkbox color.bind="color" label="Ticked" checked>
-						</ssv-checkbox>
-					</div>
-					<div>
-						<ssv-checkbox color.bind="color" label="Unticked Disabled" disabled>
-						</ssv-checkbox>
-					</div>
-					<div>
-						<ssv-checkbox color.bind="color" label="Ticked Disabled" checked disabled>
-						</ssv-checkbox>
-					</div>
-				</div>
-			</figure>
+				</figure>
+			</section>
 		</section>
-	</section>
+	</div>
 </template>
