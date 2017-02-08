@@ -5,8 +5,13 @@ export class CheckboxSampleController {
 
 	isTicked = false;
 	isDisabled = false;
-	colors = [null, "primary", "accent", "danger", "warn", "success"];
+	indeterminateChecked = null;
 
+	colors = [null, "primary", "accent", "danger", "warn", "success"];
 	types = ["minimal", "filled"];
+
+	resetIndeterminate() {
+		this.indeterminateChecked = null;
+	}
 
 }

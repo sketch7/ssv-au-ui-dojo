@@ -44,6 +44,16 @@
 				</ssv-checkbox>
 			</div>
 		</section>
+		<section>
+			<h2>indeterminate</h2>
+			<div>
+				<ssv-checkbox label="Indeterminate" checked.bind="indeterminateChecked" indeterminate type="minimal">
+				</ssv-checkbox>
+				<ssv-checkbox label="Indeterminate" checked.bind="indeterminateChecked" indeterminate type="filled">
+				</ssv-checkbox>
+				<button ssv-button click.trigger="resetIndeterminate()">Reset</button>
+			</div>
+		</section>
 
 		<section>
 			<h2>variations</h2>
@@ -61,11 +71,19 @@
 							</ssv-checkbox>
 						</div>
 						<div>
+							<ssv-checkbox color.bind="color" type.bind="type" label="Indeterminate" indeterminate>
+							</ssv-checkbox>
+						</div>
+						<div>
 							<ssv-checkbox color.bind="color" type.bind="type" label="Unticked Disabled" disabled>
 							</ssv-checkbox>
 						</div>
 						<div>
 							<ssv-checkbox color.bind="color" type.bind="type" label="Ticked Disabled" checked disabled>
+							</ssv-checkbox>
+						</div>
+						<div>
+							<ssv-checkbox color.bind="color" type.bind="type" label="Indeterminate Disabled" disabled indeterminate>
 							</ssv-checkbox>
 						</div>
 					</div>
