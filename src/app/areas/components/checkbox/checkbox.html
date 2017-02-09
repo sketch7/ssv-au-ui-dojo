@@ -7,8 +7,16 @@
 			<div>
 				State <strong>${isTicked ? "Ticked" : "Unticked"}</strong>
 			</div>
+			<pre><code class="language-html" ssv-syntax>&lt;ssv-checkbox label="Tick me!" checked.bind="isTicked"&gt;&lt;/ssv-checkbox&gt;
+State &lt;strong&gt; &dollar; {isTicked ? "Ticked" : "Unticked"}&lt;/strong&gt;</code></pre>
 		</section>
-
+		<section>
+			<h2>type</h2>
+			<ssv-checkbox label="Filled style" type="filled">
+			</ssv-checkbox>
+			<pre><code class="language-html" ssv-syntax>&lt;ssv-checkbox label="Filled style" type="filled"&gt;
+&lt;/ssv-checkbox&gt;</code></pre>
+		</section>
 		<section>
 			<h2>disabled states</h2>
 			<div>
@@ -16,6 +24,10 @@
 				</ssv-checkbox>
 				<ssv-checkbox label="Disabled Unticked" disabled>
 				</ssv-checkbox>
+				<pre><code class="language-html" ssv-syntax>&lt;ssv-checkbox label="Disabled Ticked" checked disabled&gt;
+&lt;/ssv-checkbox&gt;
+&lt;ssv-checkbox label="Disabled Unticked" disabled&gt;
+&lt;/ssv-checkbox&gt;</code></pre>
 			</div>
 			<h2>disabled bind</h2>
 			<div>
@@ -23,6 +35,10 @@
 				</ssv-checkbox>
 				<ssv-checkbox label="Disable the other" checked.bind="isDisabled">
 				</ssv-checkbox>
+				<pre><code class="language-html" ssv-syntax>&lt;ssv-checkbox label="I can be disabled" disabled.bind="isDisabled"&gt;
+&lt;/ssv-checkbox&gt;
+&lt;ssv-checkbox label="Disable the other" checked.bind="isDisabled"&gt;
+&lt;/ssv-checkbox&gt;</code></pre>
 			</div>
 			<h2>label position</h2>
 			<div>
@@ -33,15 +49,12 @@
 				</ssv-checkbox>
 				<ssv-checkbox label="label after" label-position="after" type="minimal">
 				</ssv-checkbox>
-			</div>
-			<div>
-				<h3>filled</h3>
-				<ssv-checkbox label="label before" label-position="before" type="filled">
-				</ssv-checkbox>
-				<ssv-checkbox label="label before disabled" label-position="before" disabled type="filled">
-				</ssv-checkbox>
-				<ssv-checkbox label="label after" label-position="after" type="filled">
-				</ssv-checkbox>
+				<pre><code class="language-html" ssv-syntax>&lt;ssv-checkbox label="label before" label-position="before"&gt;
+&lt;/ssv-checkbox&gt;
+&lt;ssv-checkbox label="label before disabled" label-position="before" disabled&gt;
+&lt;/ssv-checkbox&gt;
+&lt;ssv-checkbox label="label after" label-position="after"&gt;
+&lt;/ssv-checkbox&gt;</code></pre>
 			</div>
 		</section>
 		<section>
@@ -52,6 +65,11 @@
 				<ssv-checkbox label="Indeterminate" checked.bind="indeterminateChecked" indeterminate type="filled">
 				</ssv-checkbox>
 				<button ssv-button click.trigger="resetIndeterminate()">Reset</button>
+				<pre><code class="language-html" ssv-syntax>&lt;ssv-checkbox label="Indeterminate" checked.bind="indeterminateChecked" indeterminate type="minimal"&gt;
+&lt;/ssv-checkbox&gt;
+&lt;ssv-checkbox label="Indeterminate" checked.bind="indeterminateChecked" indeterminate type="filled"&gt;
+&lt;/ssv-checkbox&gt;
+&lt;button ssv-button click.trigger="indeterminateChecked = null"&gt;Reset&lt;/button&gt;</code></pre>
 			</div>
 		</section>
 
