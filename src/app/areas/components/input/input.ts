@@ -7,6 +7,7 @@ export class InputSampleController {
 	isDisabled = true;
 	firstName = "Chiko";
 	modifier = "success";
+	colors = [null, "primary", "accent", "danger", "warn", "success"];
 
 	private logger: ILog;
 
