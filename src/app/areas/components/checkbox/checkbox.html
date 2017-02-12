@@ -1,0 +1,111 @@
+<template>
+	<div class="component component-checkbox">
+		<section>
+			<h2>basic</h2>
+			<ssv-checkbox label="Tick me!" checked.bind="isTicked">
+			</ssv-checkbox>
+			<div>
+				State <strong>${isTicked ? "Ticked" : "Unticked"}</strong>
+			</div>
+			<pre><code class="language-html" ssv-syntax>&lt;ssv-checkbox label="Tick me!" checked.bind="isTicked"&gt;&lt;/ssv-checkbox&gt;
+State &lt;strong&gt; &dollar; {isTicked ? "Ticked" : "Unticked"}&lt;/strong&gt;</code></pre>
+		</section>
+		<section>
+			<h2>type</h2>
+			<ssv-checkbox label="Filled style" type="filled">
+			</ssv-checkbox>
+			<pre><code class="language-html" ssv-syntax>&lt;ssv-checkbox label="Filled style" type="filled"&gt;
+&lt;/ssv-checkbox&gt;</code></pre>
+		</section>
+		<section>
+			<h2>disabled states</h2>
+			<div>
+				<ssv-checkbox label="Disabled Ticked" checked disabled>
+				</ssv-checkbox>
+				<ssv-checkbox label="Disabled Unticked" disabled>
+				</ssv-checkbox>
+				<pre><code class="language-html" ssv-syntax>&lt;ssv-checkbox label="Disabled Ticked" checked disabled&gt;
+&lt;/ssv-checkbox&gt;
+&lt;ssv-checkbox label="Disabled Unticked" disabled&gt;
+&lt;/ssv-checkbox&gt;</code></pre>
+			</div>
+			<h2>disabled bind</h2>
+			<div>
+				<ssv-checkbox label="I can be disabled" disabled.bind="isDisabled">
+				</ssv-checkbox>
+				<ssv-checkbox label="Disable the other" checked.bind="isDisabled">
+				</ssv-checkbox>
+				<pre><code class="language-html" ssv-syntax>&lt;ssv-checkbox label="I can be disabled" disabled.bind="isDisabled"&gt;
+&lt;/ssv-checkbox&gt;
+&lt;ssv-checkbox label="Disable the other" checked.bind="isDisabled"&gt;
+&lt;/ssv-checkbox&gt;</code></pre>
+			</div>
+			<h2>label position</h2>
+			<div>
+				<ssv-checkbox label="label before" label-position="before" type="minimal">
+				</ssv-checkbox>
+				<ssv-checkbox label="label before disabled" label-position="before" disabled type="minimal">
+				</ssv-checkbox>
+				<ssv-checkbox label="label after" label-position="after" type="minimal">
+				</ssv-checkbox>
+				<pre><code class="language-html" ssv-syntax>&lt;ssv-checkbox label="label before" label-position="before"&gt;
+&lt;/ssv-checkbox&gt;
+&lt;ssv-checkbox label="label before disabled" label-position="before" disabled&gt;
+&lt;/ssv-checkbox&gt;
+&lt;ssv-checkbox label="label after" label-position="after"&gt;
+&lt;/ssv-checkbox&gt;</code></pre>
+			</div>
+		</section>
+		<section>
+			<h2>indeterminate</h2>
+			<div>
+				<ssv-checkbox label="Indeterminate" indeterminate checked.bind="indeterminateChecked" type="minimal">
+				</ssv-checkbox>
+				<ssv-checkbox label="Indeterminate" indeterminate checked.bind="indeterminateChecked" type="filled">
+				</ssv-checkbox>
+				<button ssv-button click.trigger="resetIndeterminate()">Reset</button>
+				<pre><code class="language-html" ssv-syntax>&lt;ssv-checkbox label="Indeterminate" indeterminate checked.bind="indeterminateChecked" type="minimal"&gt;
+&lt;/ssv-checkbox&gt;
+&lt;ssv-checkbox label="Indeterminate" indeterminate checked.bind="indeterminateChecked" type="filled"&gt;
+&lt;/ssv-checkbox&gt;
+&lt;button ssv-button click.trigger="indeterminateChecked = null"&gt;Reset&lt;/button&gt;</code></pre>
+			</div>
+		</section>
+
+		<section>
+			<h2>variations</h2>
+			<section repeat.for="type of types">
+				<h3>type <strong>${type}</strong></h3>
+				<figure repeat.for="color of colors">
+					<div class="row">
+						<h4>${color ? color : "default"}</h4>
+						<div>
+							<ssv-checkbox color.bind="color" type.bind="type" label="Unticked">
+							</ssv-checkbox>
+						</div>
+						<div>
+							<ssv-checkbox color.bind="color" type.bind="type" label="Ticked" checked>
+							</ssv-checkbox>
+						</div>
+						<div>
+							<ssv-checkbox color.bind="color" type.bind="type" label="Indeterminate" indeterminate>
+							</ssv-checkbox>
+						</div>
+						<div>
+							<ssv-checkbox color.bind="color" type.bind="type" label="Unticked Disabled" disabled>
+							</ssv-checkbox>
+						</div>
+						<div>
+							<ssv-checkbox color.bind="color" type.bind="type" label="Ticked Disabled" checked disabled>
+							</ssv-checkbox>
+						</div>
+						<div>
+							<ssv-checkbox color.bind="color" type.bind="type" label="Indeterminate Disabled" disabled indeterminate>
+							</ssv-checkbox>
+						</div>
+					</div>
+				</figure>
+			</section>
+		</section>
+	</div>
+</template>
