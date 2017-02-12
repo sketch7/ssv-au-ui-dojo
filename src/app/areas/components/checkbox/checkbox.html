@@ -42,7 +42,6 @@ State &lt;strong&gt; &dollar; {isTicked ? "Ticked" : "Unticked"}&lt;/strong&gt;<
 			</div>
 			<h2>label position</h2>
 			<div>
-				<h3>minimal</h3>
 				<ssv-checkbox label="label before" label-position="before" type="minimal">
 				</ssv-checkbox>
 				<ssv-checkbox label="label before disabled" label-position="before" disabled type="minimal">
@@ -60,14 +59,14 @@ State &lt;strong&gt; &dollar; {isTicked ? "Ticked" : "Unticked"}&lt;/strong&gt;<
 		<section>
 			<h2>indeterminate</h2>
 			<div>
-				<ssv-checkbox label="Indeterminate" checked.bind="indeterminateChecked" indeterminate type="minimal">
+				<ssv-checkbox label="Indeterminate" indeterminate checked.bind="indeterminateChecked" type="minimal">
 				</ssv-checkbox>
-				<ssv-checkbox label="Indeterminate" checked.bind="indeterminateChecked" indeterminate type="filled">
+				<ssv-checkbox label="Indeterminate" indeterminate checked.bind="indeterminateChecked" type="filled">
 				</ssv-checkbox>
 				<button ssv-button click.trigger="resetIndeterminate()">Reset</button>
-				<pre><code class="language-html" ssv-syntax>&lt;ssv-checkbox label="Indeterminate" checked.bind="indeterminateChecked" indeterminate type="minimal"&gt;
+				<pre><code class="language-html" ssv-syntax>&lt;ssv-checkbox label="Indeterminate" indeterminate checked.bind="indeterminateChecked" type="minimal"&gt;
 &lt;/ssv-checkbox&gt;
-&lt;ssv-checkbox label="Indeterminate" checked.bind="indeterminateChecked" indeterminate type="filled"&gt;
+&lt;ssv-checkbox label="Indeterminate" indeterminate checked.bind="indeterminateChecked" type="filled"&gt;
 &lt;/ssv-checkbox&gt;
 &lt;button ssv-button click.trigger="indeterminateChecked = null"&gt;Reset&lt;/button&gt;</code></pre>
 			</div>
