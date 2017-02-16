@@ -6,102 +6,101 @@
 				value.bind="firstName"
 				type="text"
 				help="press submit to read value (see console)">
-			</ssv-input>
-			<button ssv-button="primary" click.trigger="submit()">Submit</button>
-			<pre><code class="language-html" ssv-syntax>&lt;ssv-input label="First name"
+				</ssv-input>
+				<button ssv-button="primary"
+					click.trigger="submit()">Submit</button>
+					<pre><code class="language-html" ssv-syntax>&lt;ssv-input label="First name"
 	value.bind="Chiko"
 	type="text"
 	help="press submit to read value (see console)"&gt;
 &lt;/ssv-input&gt;</code></pre>
 		</form>
 	</section>
-
 	<section>
-		<h2>input variations</h2>
-		<form>
-			<div class="row">
-				<ssv-input label="First Name"
-					placeholder="e.g. Chiko">
+		<h2>color</h2>
+		<div class="row">
+			<ssv-input label="Input success with help"
+				value="Successful!"
+				color="success"
+				help="enter a valid email e.g. john@doe.com">
+				</ssv-input>
+				<pre><code class="language-html" ssv-syntax>&lt;ssv-input label="Input success with help"
+	color="success"
+	value="Successful!"
+	help="enter a valid email e.g. john@doe.com"&gt;
+&lt;/ssv-input&gt;</code></pre>
+		</div>
+	</section>
+	<section>
+		<h2>placeholder</h2>
+		<div class="row">
+			<ssv-input label="First Name"
+				placeholder="e.g. Chiko">
 				</ssv-input>
 				<pre><code class="language-html" ssv-syntax>&lt;ssv-input label="First Name"
 	placeholder="e.g. Chiko"&gt;
 &lt;/ssv-input&gt;</code></pre>
-			</div>
-			<div class="row">
-				<ssv-input label="Disabled"
-					value="I am not editable"
-					disabled>
+		</div>
+	</section>
+	<section>
+		<h2>disabled</h2>
+		<div class="row">
+			<ssv-input label="Disabled"
+				value="I am not editable"
+				disabled>
 				</ssv-input>
 				<pre><code class="language-html" ssv-syntax>&lt;ssv-input label="Disabled"
 	value="I am not editable"
 	disabled&gt;
 &lt;/ssv-input&gt;</code></pre>
-			</div>
-			<div class="row">
-				<ssv-input ref="disabledInput"
-					label="Bound Disabled"
-					value="I am not editable and disable is bound"
-					disabled.bind="isDisabled">
+		</div>
+		<div class="row">
+			<ssv-input ref="disabledInput"
+				label="Bound Disabled"
+				value="I am not editable and disable is bound"
+				disabled.bind="isDisabled">
 				</ssv-input>
-				<button ssv-button click.trigger="toggleDisable()">${isDisabled ? "enable" : "disable"}</button>
-				<pre><code class="language-html" ssv-syntax>&lt;ssv-input label="Bound Disabled"
+				<button ssv-button
+					click.trigger="toggleDisable()">${isDisabled ? "enable" : "disable"}</button>
+					<pre><code class="language-html" ssv-syntax>&lt;ssv-input label="Bound Disabled"
 	value="I am not editable and disable is bound"
 	disabled.bind="isDisabled"&gt;
 &lt;/ssv-input&gt;</code></pre>
-			</div>
-			<div class="row">
-				<ssv-input label="Password"
-					type="password">
+		</div>
+	</section>
+	<section>
+		<h2>type - password</h2>
+		<div class="row">
+			<ssv-input label="Password"
+				type="password">
 				</ssv-input>
 				<pre><code class="language-html" ssv-syntax>&lt;ssv-input label="Password"
 	type="password"&gt;
 &lt;/ssv-input&gt;</code></pre>
-			</div>
+		</div>
+	</section>
+	<section>
+		<h2>modifiers</h2>
+		<form>
 			<div class="row">
-				<ssv-input label="Input success with help"
-					value="Successful!"
-					help="enter a valid email e.g. john@doe.com"
-					modifier="success">
-				</ssv-input>
-				<pre><code class="language-html" ssv-syntax>&lt;ssv-input label="Input success with help"
-	value="Successful!"
-	help="enter a valid email e.g. john@doe.com"
-	modifier="success"&gt;
-&lt;/ssv-input&gt;</code></pre>
-			</div>
-			<div class="row">
-				<ssv-input label="Input with error"
-					value="Failure!"
-					modifier="error">
-				</ssv-input>
-				<pre><code class="language-html" ssv-syntax>&lt;ssv-input label="Input with error"
-	value="Failure!"
-	modifier="error"&gt;
-&lt;/ssv-input&gt;</code></pre>
-			</div>
-			<div class="row">
-				<ssv-input label="Input with warning"
-					value="Warning!"
-					modifier="warn">
-				</ssv-input>
-				<pre><code class="language-html" ssv-syntax>&lt;ssv-input label="Input with warning"
-	value="Warning!"
-	modifier="warn"&gt;
-&lt;/ssv-input&gt;</code></pre>
-			</div>
-			<div class="row">
-				<ssv-input 
-					label="I generate my modifiers"
+				<ssv-input label="I generate my modifiers"
 					value.bind="modifier"
 					help="they can be seprated by space (see element generated css class)."
 					modifier.bind="modifier">
-				</ssv-input>
-				<pre><code class="language-html" ssv-syntax>&lt;ssv-input label="I generate my modifiers"
+					</ssv-input>
+					<pre><code class="language-html" ssv-syntax>&lt;ssv-input label="I generate my modifiers"
 	value.bind="modifier"
 	help="they can be seprated by space (see element generated css class)."
 	modifier.bind="modifier"&gt;
 &lt;/ssv-input&gt;</code></pre>
 			</div>
+			<h2>variants</h2>
+			<section repeat.for="color of colors">
+				<ssv-input label="${color ? color : 'default'}"
+					color.bind="color"
+					help="this is the help message">
+					</ssv-input>
+			</section>
 		</form>
 	</section>
 </template>
