@@ -1,32 +1,58 @@
 <template>
 	<section>
 		<h2>basic</h2>
-		<ssv-select options.bind="options"
-			placeholder="test"></ssv-select>
-			<pre><code class="language-html" ssv-syntax>&lt;ssv-select options.bind="options" placeholder="test"&gt;&lt;/ssv-select&gt;</code></pre>
+		<ssv-select options.bind="options" type="multi"
+			placeholder="select game"></ssv-select>
+			<pre><code class="language-html" ssv-syntax>&lt;ssv-select options.bind="options" placeholder="select game"&gt;&lt;/ssv-select&gt;</code></pre>
+
+		<ssv-select options.bind="heroes"
+		 	text="name"
+			value="id"
+			selected.bind="heroSelected"
+			placeholder="select hero"></ssv-select>
+			<pre><code class="language-html" ssv-syntax>&lt;ssv-select options.bind="options" placeholder="select hero"&gt;&lt;/ssv-select&gt;</code></pre>
+
 
 		<h3>color</h3>
-		<ssv-select options.bind="options"
-			placeholder="test"
+		<ssv-select options.bind="options" type="multi"
+			placeholder="select game"
+			selected.bind="optionsSelected"
 			color="primary"></ssv-select>
-			<pre><code class="language-html" ssv-syntax>&lt;ssv-select options.bind="options" placeholder="test" color="primary"&gt;&lt;/ssv-select&gt;</code></pre>
+			<pre><code class="language-html" ssv-syntax>&lt;ssv-select options.bind="options" placeholder="select game" color="primary"&gt;&lt;/ssv-select&gt;</code></pre>
+		
+		<strong>selected text:</strong>
+		<ul>
+			<li repeat.for="item of optionsSelected">${item.text}</li>
+		</ul>
 
 		<h3>event: change</h3>
 		<i>*note: select an item and check console.</i>
-		<ssv-select options.bind="options"
-			placeholder="test"
+		<!--<ssv-select options.bind="options"
+			placeholder="select game"
 			change.delegate="onChange($event)"></ssv-select>
-			<pre><code class="language-html" ssv-syntax>&lt;ssv-select options.bind="options" placeholder="test" change.delegate="onChange($event)"&gt;&lt;/ssv-select&gt;</code></pre>
+			<pre><code class="language-html" ssv-syntax>&lt;ssv-select options.bind="options" placeholder="select game" change.delegate="onChange($event)"&gt;&lt;/ssv-select&gt;</code></pre>-->
+
 
 	</section>
 
 	<h2>variants</h2>
 	<section>
+		<h3>type <strong>single</strong></h3>
 		<template repeat.for="color of colors">
+			
 			<ssv-select options.bind="options"
-				placeholder="test"
-				color.bind="color"
-				name="address-book"></ssv-select>
+				selected.bind="optionSelected"
+				placeholder="select game"
+				color.bind="color"></ssv-select>
+		</template>
+	</section>
+	<section>
+		<h3>type <strong>multi</strong></h3>
+		<template repeat.for="color of colors">
+			<ssv-select options.bind="options" type="multi"
+				placeholder="select game"
+				selected.bind="optionsSelected"
+				color.bind="color"></ssv-select>
 		</template>
 	</section>
 </template>
