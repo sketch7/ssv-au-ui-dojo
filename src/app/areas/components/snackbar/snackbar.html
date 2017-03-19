@@ -1,0 +1,45 @@
+<template>
+	<div class="component component-snackbar">
+		Snackbars provide brief feedback about an operation through a message.
+		<section>
+			<h2>basic</h2>
+			<button ssv-button="primary"
+			 click.trigger="showBasic()">show snackbar!
+			</button>
+
+			<button ssv-button="primary"
+			 click.delegate="showWithAction()">show with action!
+			</button>
+		</section>
+
+		<section>
+			<h2>api</h2>
+			<button ssv-button="primary"
+			 click.trigger="dismissCurrent()">
+			 dismiss current
+			</button>
+			<button ssv-button="primary"
+			 click.trigger="dismissAll()">
+			 dismiss all
+			</button>
+		</section>
+
+		<section class="snackbar-references">
+			<h2>references</h2>
+			<div repeat.for="item of items"
+			 class="snackbar-references-item ${item === activeItem ? 'snackbar-references-item--active' : ''}">
+				<div class="message">
+					${item.message}
+					<ssv-badge color="info">${item.options.duration}</ssv-badge>
+				</div>
+				<button ssv-button="danger"
+				 click.delegate="item.dismiss()">
+					dismiss
+				</button>
+			</div>
+			<p if.bind="!items.length">
+				No items added.
+			</p>
+		</section>
+	</div>
+</template>
