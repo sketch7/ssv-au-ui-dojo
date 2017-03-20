@@ -17,7 +17,7 @@
   "license": "MIT",
   "dependencies": {
     "@ssv/au-core": "^0.3.0",
-    "@ssv/au-ui": "^0.5.0",
+    "@ssv/au-ui": "^0.6.0",
     "@ssv/core": "^0.3.3",
     "@types/bluebird": "^3.0.37",
     "@types/lodash": "^4.14.50",
