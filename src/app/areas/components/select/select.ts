@@ -7,22 +7,28 @@ export class SelectSampleController {
 
 	types: string[] = supportedSelectTypes;
 	colors = [null, "primary", "accent", "danger", "warn", "success", "info"];
+	isDisabled = false;
+
+	// options: any[];
 	options: any[] = [
-		{ text: "League of Legends", value: "lol" },
-		{ text: "World Of Warcraft", value: "wow" },
-		{ text: "Heroes of the Storm", value: "hots" }
+		{ text: "League of Legends", value: "lol", type: "MOBA" },
+		{ text: "World Of Warcraft", value: "wow", type: "MMO" },
+		{ text: "Heroes of the Storm", value: "hots", type: "MOBA" }
 	];
-	optionSelected = null;
+	optionSelected = { text: "World Of Warcraft", value: "wow", type: "MMO" };
 	optionsSelected: any[] = [
-		{ text: "World Of Warcraft", value: "wow" }
+		{ text: "World Of Warcraft", value: "wow", type: "MMO" }
 	];
+
+	fruits: string[] = ["banana", "strawberry", "melon"];
+	selectedFruit = "patato";
+	selectedFruits = ["patato"];
 
 	heroes: any[] = [
 		{ id: 1, name: "thor", strength: 20 },
 		{ id: 2, name: "iron man", strength: 11 },
 		{ id: 3, name: "batman", strength: 7 }
 	];
-
 	heroSelected = { id: 2, name: "iron man", strength: 11 };
 	heroesSelected: any[] = [
 		{ id: 3, name: "batman", strength: 7 }
@@ -42,6 +48,16 @@ export class SelectSampleController {
 			value: event.detail.value,
 			event: event
 		});
+	}
+
+	addGame() {
+		this.logger.debug("addGame", "adding game");
+		// this.options.push({ text: "WildStar", value: "wild-star", type: "MMO" });
+		this.options = [...this.options, { text: "WildStar", value: "wild-star", type: "MMO" }];
+	}
+
+	toggleDisable() {
+		this.isDisabled = !this.isDisabled;
 	}
 
 }
