@@ -15,6 +15,7 @@ export class ComponentService {
 		{ title: "Checkbox", key: "checkbox", },
 		{ title: "Icon", key: "icon", },
 		{ title: "Select", key: "select" },
+		{ title: "Snackbar", key: "snackbar", },
 	];
 
 	private routes: RouteLink[] = [];

@@ -1,4 +1,4 @@
-import "prismjs";
+import { highlightElement } from "prismjs";
 import { autoinject } from "aurelia-dependency-injection";
 import { customAttribute } from "aurelia-templating";
 
@@ -12,7 +12,7 @@ export class SyntaxHighlighterAttribute {
 	}
 
 	bind() {
-		Prism.highlightElement(this.element, false);
+		highlightElement(this.element, false);
 	}
 
 }
