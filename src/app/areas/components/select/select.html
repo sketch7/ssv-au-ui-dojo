@@ -1,43 +1,69 @@
 <template>
 	<section>
 		<h2>basic</h2>
-		<!--<ssv-select options.bind="options" type="multi"
+		<ssv-select
+			options.bind="options"
+			selected.bind="optionSelected"
 			placeholder="select game"></ssv-select>
-			<pre><code class="language-html" ssv-syntax>&lt;ssv-select options.bind="options" placeholder="select game"&gt;&lt;/ssv-select&gt;</code></pre>-->
+			<pre><code class="language-html" ssv-syntax>&lt;ssv-select options.bind="options" selected.bind="optionSelected" placeholder="select game"&gt;&lt;/ssv-select&gt;</code></pre>
+			<pre><code class="language-typescript" ssv-syntax>options = [
+	{ text: "League of Legends", value: "lol", type: "MOBA" },
+	{ text: "World Of Warcraft", value: "wow", type: "MMO" },
+	{ text: "Heroes of the Storm", value: "hots", type: "MOBA" }
+];</code></pre>
 
-		<!--<ssv-select options.bind="heroes"
+		<h3>simple list</h3>
+		<ssv-select options.bind="fruits"
+			placeholder="select fruit"
+			selected.bind="selectedFruit"
+			color="danger"></ssv-select>
+			<pre><code class="language-html" ssv-syntax>&lt;ssv-select options.bind="fruits" 
+	placeholder="select fruit" 
+	selected.bind="selectedFruit" 
+	color="danger"&gt;
+&lt;/ssv-select&gt;</code></pre>
+			<pre><code class="language-typescript" ssv-syntax>fruits = ["banana", "strawberry", "melon"];</code></pre>
+
+		<h3>Specify text and value properties</h3>
+		<ssv-select options.bind="heroes"
 		 	text="name"
 			value="id"
 			selected.bind="heroSelected"
 			placeholder="select hero"></ssv-select>
-			<pre><code class="language-html" ssv-syntax>&lt;ssv-select options.bind="options" placeholder="select hero"&gt;&lt;/ssv-select&gt;</code></pre>-->
+			<pre><code class="language-html" ssv-syntax>&lt;ssv-select options.bind="heroes" 
+	text="name" 
+	value="id" 
+	selected.bind="heroSelected" 
+	placeholder="select hero"&gt;
+&lt;/ssv-select&gt;</code></pre>
+			<pre><code class="language-typescript" ssv-syntax>heroes = [
+	{ id: 1, name: "thor", strength: 20 },
+	{ id: 2, name: "iron man", strength: 11 },
+	{ id: 3, name: "batman", strength: 7 }
+];</code></pre>
 
 
-	<h3>simple list</h3>
-		<!--<ssv-select options.bind="fruits"
-			placeholder="select fruit"
-			selected.bind="selectedFruit"
-			color="danger"></ssv-select>
-			<pre><code class="language-html" ssv-syntax>&lt;ssv-select options.bind="options" placeholder="select game" color="primary"&gt;&lt;/ssv-select&gt;</code></pre>
+		<h3>group by</h3>
+		<ssv-select options.bind="options"
+			groupby="type"
+			selected.bind="optionSelected"
+			placeholder="select game"></ssv-select>
+			<pre><code class="language-html" ssv-syntax>&lt;ssv-select options.bind="options" 
+	groupby="type"
+	selected.bind="optionSelected" 
+	placeholder="select game"&gt;
+&lt;/ssv-select&gt;</code></pre>
+			<pre><code class="language-typescript" ssv-syntax>options = [
+	{ text: "League of Legends", value: "lol", type: "MOBA" },
+	{ text: "World Of Warcraft", value: "wow", type: "MMO" },
+	{ text: "Heroes of the Storm", value: "hots", type: "MOBA" }
+];</code></pre>
 
-		<ssv-select options.bind="fruits" type="multi"
-			placeholder="select fruit"
-			selected.bind="selectedFruits"
-			color="danger"></ssv-select>
-			<pre><code class="language-html" ssv-syntax>&lt;ssv-select options.bind="options" placeholder="select game" color="primary"&gt;&lt;/ssv-select&gt;</code></pre>-->
-		
-
-		<h3>color</h3>
+		<h3>multi select</h3>
 		<button ssv-button click.delegate="addGame()">Add game</button>
-		<!--<ssv-select options.bind="options" type="multi"
-			placeholder="select game"
-			selected.bind="optionsSelected"
-			color="primary"></ssv-select>
-			<pre><code class="language-html" ssv-syntax>&lt;ssv-select options.bind="options" placeholder="select game" color="primary"&gt;&lt;/ssv-select&gt;</code></pre>
-		
-		-->
 		<ssv-select options.bind="options" 
 			type="multi"
+			auto-close="false"
 			placeholder="select game"
 			selected.bind="optionsSelected"
 			color="primary"></ssv-select>
@@ -46,50 +72,55 @@
 		<ul>
 			<li repeat.for="item of optionsSelected">${item.text}</li>
 		</ul>
-
-		<h3>group by</h3>
-		<ssv-select options.bind="options"
-			groupby="type"
-			selected.bind="optionSelected"
-			placeholder="select game"></ssv-select>
-			<pre><code class="language-html" ssv-syntax>&lt;ssv-select options.bind="options" placeholder="select hero"&gt;&lt;/ssv-select&gt;</code></pre>
-
-		<!--<ssv-select options.bind="options"
-			groupby="type"
-			selected.bind="optionSelected"
-			placeholder="select game"></ssv-select>
-			<pre><code class="language-html" ssv-syntax>&lt;ssv-select options.bind="options" placeholder="select hero"&gt;&lt;/ssv-select&gt;</code></pre>-->
-
-
+		<pre><code class="language-html" ssv-syntax>&lt;ssv-select options.bind="options" 
+	type="multi"
+	auto-close="false"
+	placeholder="select game"
+	selected.bind="optionsSelected"
+	color="primary"&gt;
+&lt;/ssv-select&gt;</code></pre>
 
 		<h3>event: change</h3>
 		<i>*note: select an item and check console.</i>
-		<!--<ssv-select options.bind="options"
+		<ssv-select options.bind="options"
 			placeholder="select game"
 			change.delegate="onChange($event)"></ssv-select>
-			<pre><code class="language-html" ssv-syntax>&lt;ssv-select options.bind="options" placeholder="select game" change.delegate="onChange($event)"&gt;&lt;/ssv-select&gt;</code></pre>-->
-
+			<pre><code class="language-html" ssv-syntax>&lt;ssv-select options.bind="options" placeholder="select game" change.delegate="onChange($event)"&gt;&lt;/ssv-select&gt;</code></pre>
+			<pre><code class="language-typescript" ssv-syntax>onChange(event: CustomEvent) {
+	this.logger.debug("onChange", "triggered >>>", {
+		previous: event.detail.previous,
+		value: event.detail.value
+	});
+}</code></pre>
 
 	<h3>disabled</h3>
 		<ssv-select options.bind="options"
 			disabled
-			groupby="type"
 			selected.bind="optionSelected"
 			placeholder="select game"></ssv-select>
+			<pre><code class="language-html" ssv-syntax>&lt;ssv-select options.bind="options" disabled selected.bind="optionSelected" placeholder="select game"&gt;&lt;/ssv-select&gt;</code></pre>
 
 		<ssv-select options.bind="options" 
 			type="multi"
 			disabled.bind="isDisabled"
 			placeholder="select game"
 			selected.bind="optionsSelected"
-			color="primary"></ssv-select>
-
+			color="success"></ssv-select>
 		<button ssv-button click.delegate="toggleDisable()">${isDisabled ? "enable" : "disable"}</button>
+
+			<pre><code class="language-html" ssv-syntax>&lt;ssv-select options.bind="options"
+	type="multi"
+	disabled.bind="isDisabled"
+	placeholder="select game"
+	selected.bind="optionSelected"
+	color="success"&gt;
+&lt;/ssv-select&gt;</code></pre>
+
 
 	</section>
 
 	<h2>variants</h2>
-	<!--<section>
+	<section>
 		<h3>type <strong>single</strong></h3>
 		<template repeat.for="color of colors">
 			
@@ -107,5 +138,5 @@
 				selected.bind="optionsSelected"
 				color.bind="color"></ssv-select>
 		</template>
-	</section>-->
+	</section>
 </template>
