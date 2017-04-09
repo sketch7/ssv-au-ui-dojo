@@ -23,6 +23,7 @@
 		"node-waves": "npm:node-waves/dist",
 		"fuse": "npm:fuse.js/src",
 		"prismjs": "npm:prismjs",
+		"prismjs/typescript": "npm:prismjs/components/prism-typescript.min.js",
 	};
 
 	// packages tells the System loader how to load when no filename and/or no extension

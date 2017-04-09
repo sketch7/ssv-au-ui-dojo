@@ -1,3 +1,4 @@
+import "prismjs/typescript";
 import { highlightElement } from "prismjs";
 import { autoinject } from "aurelia-dependency-injection";
 import { customAttribute } from "aurelia-templating";
