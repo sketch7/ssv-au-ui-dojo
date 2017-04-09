@@ -9,7 +9,6 @@ export class SelectSampleController {
 	colors = [null, "primary", "accent", "danger", "warn", "success", "info"];
 	isDisabled = false;
 
-	// options: any[];
 	options: any[] = [
 		{ text: "League of Legends", value: "lol", type: "MOBA" },
 		{ text: "World Of Warcraft", value: "wow", type: "MMO" },
