@@ -53,8 +53,8 @@ export class SelectSampleController {
 
 	addGame() {
 		this.counter++;
-		this.logger.debug("addGame", "adding game", `WildStar-${this.counter}`);
-		this.options = [...this.options, { text: `WildStar-${this.counter}`, value: `wild-star-${this.counter}`, type: "MMO" }];
+		this.logger.debug("addGame", "adding game", `Diablo-${this.counter}`);
+		this.options = [...this.options, { text: `Diablo ${this.counter}`, value: `diablo-${this.counter}`, type: "hack-and-slash" }];
 	}
 
 	toggleDisable() {

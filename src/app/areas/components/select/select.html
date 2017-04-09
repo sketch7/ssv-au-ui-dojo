@@ -49,7 +49,6 @@
 	{ id: 3, name: "batman", strength: 7 }
 ];</code></pre>
 
-
 		<h3>group by</h3>
 		<ssv-select options.bind="options"
 			groupby="type"
@@ -71,6 +70,7 @@
 		<ssv-select options.bind="options" 
 			type="multi"
 			auto-close="false"
+			max-selections="3"
 			placeholder="select game"
 			selected.bind="optionsSelected"
 			color="primary"></ssv-select>
@@ -82,6 +82,7 @@
 		<pre><code class="language-html" ssv-syntax>&lt;ssv-select options.bind="options" 
 	type="multi"
 	auto-close="false"
+	max-selections="3"
 	placeholder="select game"
 	selected.bind="optionsSelected"
 	color="primary"&gt;
@@ -130,7 +131,6 @@
 	selected.bind="optionSelected"
 	color="success"&gt;
 &lt;/ssv-select&gt;</code></pre>
-
 
 	</section>
 
