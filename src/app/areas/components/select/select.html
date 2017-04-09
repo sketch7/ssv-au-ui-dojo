@@ -5,7 +5,10 @@
 			options.bind="options"
 			selected.bind="optionSelected"
 			placeholder="select game"></ssv-select>
-			<pre><code class="language-html" ssv-syntax>&lt;ssv-select options.bind="options" selected.bind="optionSelected" placeholder="select game"&gt;&lt;/ssv-select&gt;</code></pre>
+			<pre><code class="language-html" ssv-syntax>&lt;ssv-select options.bind="options"
+	selected.bind="optionSelected"
+	placeholder="select game"&gt;
+&lt;/ssv-select&gt;</code></pre>
 			<pre><code class="language-typescript" ssv-syntax>options = [
 	{ text: "League of Legends", value: "lol", type: "MOBA" },
 	{ text: "World Of Warcraft", value: "wow", type: "MMO" },
@@ -85,7 +88,10 @@
 		<ssv-select options.bind="options"
 			placeholder="select game"
 			change.delegate="onChange($event)"></ssv-select>
-			<pre><code class="language-html" ssv-syntax>&lt;ssv-select options.bind="options" placeholder="select game" change.delegate="onChange($event)"&gt;&lt;/ssv-select&gt;</code></pre>
+			<pre><code class="language-html" ssv-syntax>&lt;ssv-select options.bind="options"
+	placeholder="select game"
+	change.delegate="onChange($event)"&gt;
+&lt;/ssv-select&gt;</code></pre>
 			<pre><code class="language-typescript" ssv-syntax>onChange(event: CustomEvent) {
 	this.logger.debug("onChange", "triggered >>>", {
 		previous: event.detail.previous,
@@ -98,7 +104,12 @@
 			disabled
 			selected.bind="optionSelected"
 			placeholder="select game"></ssv-select>
-			<pre><code class="language-html" ssv-syntax>&lt;ssv-select options.bind="options" disabled selected.bind="optionSelected" placeholder="select game"&gt;&lt;/ssv-select&gt;</code></pre>
+			<pre><code class="language-html" ssv-syntax>&lt;ssv-select
+	options.bind="options"
+	disabled
+	selected.bind="optionSelected"
+	placeholder="select game"&gt;
+&lt;/ssv-select&gt;</code></pre>
 
 		<ssv-select options.bind="options" 
 			type="multi"
@@ -108,7 +119,7 @@
 			color="success"></ssv-select>
 		<button ssv-button click.delegate="toggleDisable()">${isDisabled ? "enable" : "disable"}</button>
 
-			<pre><code class="language-html" ssv-syntax>&lt;ssv-select options.bind="options"
+	<pre><code class="language-html" ssv-syntax>&lt;ssv-select options.bind="options"
 	type="multi"
 	disabled.bind="isDisabled"
 	placeholder="select game"

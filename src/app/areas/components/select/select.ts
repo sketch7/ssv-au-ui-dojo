@@ -34,6 +34,7 @@ export class SelectSampleController {
 		{ id: 3, name: "batman", strength: 7 }
 	];
 
+	private counter = 0;
 	private logger: ILog;
 
 	constructor(
@@ -51,9 +52,9 @@ export class SelectSampleController {
 	}
 
 	addGame() {
-		this.logger.debug("addGame", "adding game");
-		// this.options.push({ text: "WildStar", value: "wild-star", type: "MMO" });
-		this.options = [...this.options, { text: "WildStar", value: "wild-star", type: "MMO" }];
+		this.counter++;
+		this.logger.debug("addGame", "adding game", `WildStar-${this.counter}`);
+		this.options = [...this.options, { text: `WildStar-${this.counter}`, value: `wild-star-${this.counter}`, type: "MMO" }];
 	}
 
 	toggleDisable() {
