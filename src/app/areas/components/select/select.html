@@ -9,7 +9,7 @@
 	selected.bind="optionSelected"
 	placeholder="select game"&gt;
 &lt;/ssv-select&gt;</code></pre>
-			<pre><code class="language-typescript" ssv-syntax>options = [
+			<pre><code class="language-typescript" ssv-syntax>const options = [
 	{ text: "League of Legends", value: "lol", type: "MOBA" },
 	{ text: "World Of Warcraft", value: "wow", type: "MMO" },
 	{ text: "Heroes of the Storm", value: "hots", type: "MOBA" }
@@ -25,7 +25,7 @@
 	selected.bind="selectedFruit" 
 	color="danger"&gt;
 &lt;/ssv-select&gt;</code></pre>
-			<pre><code class="language-typescript" ssv-syntax>fruits = ["banana", "strawberry", "melon"];</code></pre>
+			<pre><code class="language-typescript" ssv-syntax>const fruits = ["banana", "strawberry", "melon"];</code></pre>
 
 		<h3>Specify text and value properties</h3>
 		<ssv-select options.bind="heroes"
@@ -39,7 +39,7 @@
 	selected.bind="heroSelected" 
 	placeholder="select hero"&gt;
 &lt;/ssv-select&gt;</code></pre>
-			<pre><code class="language-typescript" ssv-syntax>heroes = [
+			<pre><code class="language-typescript" ssv-syntax>const heroes = [
 	{ id: 1, name: "thor", strength: 20 },
 	{ id: 2, name: "iron man", strength: 11 },
 	{ id: 3, name: "batman", strength: 7 }
@@ -56,7 +56,7 @@
 	selected.bind="optionSelected" 
 	placeholder="select game"&gt;
 &lt;/ssv-select&gt;</code></pre>
-			<pre><code class="language-typescript" ssv-syntax>options = [
+			<pre><code class="language-typescript" ssv-syntax>const options = [
 	{ text: "League of Legends", value: "lol", type: "MOBA" },
 	{ text: "World Of Warcraft", value: "wow", type: "MMO" },
 	{ text: "Heroes of the Storm", value: "hots", type: "MOBA" }
