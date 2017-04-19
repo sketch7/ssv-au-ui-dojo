@@ -5,6 +5,6 @@ import { supportedButtonTypes } from "@ssv/au-ui";
 export class ButtonSampleController {
 
 	types: string[] = supportedButtonTypes;
-	colors = [null, "primary", "accent", "danger", "warn", "success"];
+	colors = [null, "primary", "accent", "danger", "warn", "success", "info"];
 
 }

@@ -7,7 +7,7 @@ export class CheckboxSampleController {
 	isDisabled = false;
 	indeterminateChecked = null;
 
-	colors = [null, "primary", "accent", "danger", "warn", "success"];
+	colors = [null, "primary", "accent", "danger", "warn", "success", "info"];
 	types = ["minimal", "filled"];
 
 	resetIndeterminate() {
