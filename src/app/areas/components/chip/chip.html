@@ -1,0 +1,26 @@
+<template>
+	<section>
+		<h2>basic</h2>
+		<ssv-chip>hello chipy</ssv-chip>
+		<pre><code class="language-html" ssv-syntax>&lt;ssv-chip&gt;hello&lt;/ssv-chip&gt;</code></pre>
+
+		<h2>attributes</h2>
+		<h3>type</h3>
+		<ssv-chip color="info" type="rounded">23</ssv-chip>
+		<pre><code class="language-html" ssv-syntax>&lt;ssv-chip color="info" type="rounded"&gt;23&lt;/ssv-chip&gt;</code></pre>
+
+		<h3>color</h3>
+		<ssv-chip color="primary">23</ssv-chip>
+		<ssv-chip type="rounded" color="danger">42</ssv-chip>
+		<pre><code class="language-html" ssv-syntax>&lt;ssv-chip color="primary"&gt;23&lt;/ssv-chip&gt;
+&lt;ssv-chip type="rounded" color="danger"&gt;42&lt;/ssv-chip&gt;</code></pre>
+	</section>
+
+	<h2>variants</h2>
+	<section repeat.for="type of types">
+		<h3>type <strong>${type}</strong></h3>
+		<figure repeat.for="color of colors">
+			<ssv-chip type.bind="type" color.bind="color">${color ? color : 'default'}</ssv-chip>
+		</figure>
+	</section>
+</template>

@@ -13,6 +13,7 @@ export class ComponentService {
 		{ title: "Waves", key: "waves" },
 		{ title: "Badge", key: "badge" },
 		{ title: "Checkbox", key: "checkbox", },
+		{ title: "Chip", key: "chip", },
 		{ title: "Icon", key: "icon", },
 		{ title: "Select", key: "select" },
 		{ title: "Snackbar", key: "snackbar", },
@@ -47,6 +48,6 @@ export class ComponentService {
 		}
 
 		return this.routes;
-	};
+	}
 
 }
