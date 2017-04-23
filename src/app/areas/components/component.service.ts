@@ -13,7 +13,7 @@ export class ComponentService {
 		{ title: "Waves", key: "waves" },
 		{ title: "Badge", key: "badge" },
 		{ title: "Checkbox", key: "checkbox", },
-		{ title: "Chip", key: "chip", },
+		{ title: "Chips", key: "chips", },
 		{ title: "Icon", key: "icon", },
 		{ title: "Select", key: "select" },
 		{ title: "Snackbar", key: "snackbar", },
@@ -39,7 +39,7 @@ export class ComponentService {
 		}
 
 		const components = this.getAll();
-		for (let component of components) {
+		for (const component of components) {
 			this.routes.push({
 				label: component.title,
 				routeName: routes.components.detail,
