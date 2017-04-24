@@ -11,18 +11,19 @@ export class ChipsSampleController {
 	fruits = ["banana", "strawberry", "melon"];
 
 	options: any[] = [
-		// { text: "Barbarian", value: "barbarian", imgSrc: "/dist/assets/imgs/barb-charge_32x32.png" },
 		{ text: "Barbarian", value: "barbarian", imgSrc: "/dist/assets/imgs/barb_150x190.jpg" },
 		{ text: "Monk", value: "monk", imgText: "MNKI" },
-		{ text: "Crusader", value: "crusader", allowRemove: true, imgIcon: "shield" },
-		{ text: "Demon Hunter", value: "demon-hunter", allowRemove: false, imgSrc: "/dist/assets/imgs/yuna.jpg" }
+		{ text: "Crusader", value: "crusader", imgIcon: "shield", allowRemove: false },
+		{ text: "Demon Hunter", value: "demon-hunter", allowRemove: false },
+		{ text: "Wizard", value: "wizard", allowRemove: true }
+		// { text: "Demon Hunter", value: "demon-hunter", allowRemove: false, imgSrc: "/dist/assets/imgs/yuna.jpg" }
 	];
 
 	availableOptions: any[] = [
 		{ text: "Barbarian", value: "barbarian" },
 		{ text: "Crusader", value: "crusader" },
 		{ text: "Demon Hunter", value: "demon-hunter" },
-		{ text: "Monk", value: "monk", type: "MOBA" },
+		{ text: "Monk", value: "monk" },
 		{ text: "Witch Doctor", value: "witch-doctor" },
 		{ text: "Wizard", value: "wizard" },
 	];
