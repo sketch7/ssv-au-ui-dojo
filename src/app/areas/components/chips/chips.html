@@ -30,6 +30,15 @@
 		event: event
 	});
 }</code></pre>
+
+	<h3>disabled</h3>
+	<ssv-chips options.bind="options" disabled></ssv-chips>
+	<pre><code class="language-html" ssv-syntax>&lt;ssv-chips options.bind="options" disabled&gt;&lt;/ssv-chips&gt;</code></pre>
+
+	<ssv-chips options.bind="options" disabled.bind="isDisabled"></ssv-chips>
+	<pre><code class="language-html" ssv-syntax>&lt;ssv-chips options.bind="options" disabled.bind="isDisabled"&gt;&lt;/ssv-chips&gt;</code></pre>
+	<button ssv-button click.delegate="toggleDisable()">${isDisabled ? "enable" : "disable"}</button>
+
 	</section>
 
 	<h2>variants</h2>

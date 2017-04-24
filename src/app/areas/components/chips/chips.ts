@@ -5,6 +5,7 @@ import { supportedChipTypes } from "@ssv/au-ui";
 @autoinject
 export class ChipsSampleController {
 
+	isDisabled = false;
 	types: string[] = supportedChipTypes;
 	colors = [null, "primary", "accent", "danger", "warn", "success", "info"];
 
@@ -41,6 +42,10 @@ export class ChipsSampleController {
 			value: event.detail.value,
 			event: event
 		});
+	}
+
+	toggleDisable() {
+		this.isDisabled = !this.isDisabled;
 	}
 
 }
