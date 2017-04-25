@@ -25,7 +25,7 @@ export class ComponentService {
 	}
 
 	getByKey(key: string): Component | undefined {
-		return _.find(this.components, { key: key });
+		return _.find(this.components, { key });
 	}
 
 	count(): number {
@@ -38,7 +38,7 @@ export class ComponentService {
 		}
 
 		const components = this.getAll();
-		for (let component of components) {
+		for (const component of components) {
 			this.routes.push({
 				label: component.title,
 				routeName: routes.components.detail,
@@ -47,6 +47,6 @@ export class ComponentService {
 		}
 
 		return this.routes;
-	};
+	}
 
 }

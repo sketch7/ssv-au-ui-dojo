@@ -3,8 +3,8 @@
 $nav-text-color: $secondary-text-color !default;
 $nav-text-hover-color: $primary-text-color !default;
 $nav-active-text-color: $primary-text-color !default;
-$nav-active-color: rgba(0, 0, 0, .1) !default;
-$nav-active-hover-color: rgba(0, 0, 0, .2) !default;
+$nav-active-color: rgba(0, 0, 0, 0.1) !default;
+$nav-active-hover-color: rgba(0, 0, 0, 0.2) !default;
 $nav-hover-color: $nav-active-color !default;
 
 nav {
@@ -53,7 +53,7 @@ nav {
 			&:hover {
 				color: $nav-text-hover-color;
 				background-color: $nav-hover-color;
-				transition: background-color .2s ease-in-out;
+				transition: background-color 0.2s ease-in-out;
 			}
 		}
 	}

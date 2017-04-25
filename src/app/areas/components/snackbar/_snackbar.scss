@@ -3,15 +3,12 @@
 		&-item {
 			display: flex;
 			align-items: center;
-			margin-bottom: .5em;
+			margin-bottom: 0.5em;
 			padding: 0.3em;
 		}
 
 		&-item--active {
 			background: $primary-light-color;
-		}
-
-		.message {
 		}
 
 		button {

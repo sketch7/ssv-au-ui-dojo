@@ -22,7 +22,7 @@ body {
 		}
 
 		footer {
-			font-size: .75rem;
+			font-size: 0.75rem;
 			color: $layout-footer-text-color;
 			background: $layout-footer-bg-color;
 			padding: 0 1em;
@@ -70,6 +70,7 @@ body {
 		}
 	}
 }
+
 @media screen and (max-width: 500px) {
 	body > {
 		app-navbar,

@@ -98,7 +98,7 @@
 	change.delegate="onChange($event)"&gt;
 &lt;/ssv-select&gt;</code></pre>
 			<pre><code class="language-typescript" ssv-syntax>onChange(event: CustomEvent) {
-	this.logger.debug("onChange", "triggered >>>", {
+	this.logger.debug("onChange", "triggered", {
 		previous: event.detail.previous,
 		value: event.detail.value
 	});
