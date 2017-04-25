@@ -4,7 +4,8 @@
   "description": "Sketch7 playground/dojo for aurelia UI web components",
   "scripts": {
     "start": "gulp watch",
-    "build": "gulp rebuild"
+    "build": "gulp rebuild",
+    "lint": "echo i will lint eventually..."
   },
   "keywords": [
     "web components",
