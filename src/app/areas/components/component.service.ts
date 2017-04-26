@@ -26,7 +26,7 @@ export class ComponentService {
 	}
 
 	getByKey(key: string): Component | undefined {
-		return _.find(this.components, { key: key });
+		return _.find(this.components, { key });
 	}
 
 	count(): number {

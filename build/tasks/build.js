@@ -6,7 +6,7 @@ var sourcemaps = require("gulp-sourcemaps");
 var plumber = require("gulp-plumber");
 var sass = require("gulp-sass");
 
-var paths = require("../paths");
+var paths = require("../config");
 
 gulp.task("build", (cb) => {
 	return runSeq(

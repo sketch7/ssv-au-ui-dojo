@@ -46,7 +46,7 @@ export class SelectSampleController {
 		this.logger.debug("onChange", "triggered >>>", {
 			previous: event.detail.previous,
 			value: event.detail.value,
-			event: event
+			event
 		});
 	}
 

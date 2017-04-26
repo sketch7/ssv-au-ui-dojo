@@ -18,4 +18,4 @@ export const componentRoutes: RouteConfig[] = [
 		nav: false,
 		settings: {}
 	},
-].map(x => setRouteDefaults(x));
+].map(setRouteDefaults);

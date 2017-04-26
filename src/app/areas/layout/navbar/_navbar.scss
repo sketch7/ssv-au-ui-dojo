@@ -4,7 +4,7 @@ $logo-padding-left: 30px;
 $logo-font-size: 30px;
 
 $nav-bar-color: $primary-color !default;
-$nav-active-color: rgba(0, 0, 0, .1);
+$nav-active-color: rgba(0, 0, 0, 0.1);
 $nav-hover-color: $nav-active-color;
 
 app-navbar {
@@ -31,6 +31,7 @@ app-navbar {
 
 			a {
 				color: $secondary-text-color;
+
 				&:hover {
 					text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 				}

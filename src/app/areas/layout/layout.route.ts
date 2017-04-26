@@ -19,4 +19,4 @@ export const shellRoutes: RouteConfig[] = [
 		nav: true,
 		settings: { childRoutes: componentRoutes }
 	}
-].map(x => setRouteDefaults(x));
+].map(setRouteDefaults);
