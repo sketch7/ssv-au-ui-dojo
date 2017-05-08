@@ -1,10 +1,16 @@
 <template>
 	<section>
 		<h2>basic</h2>
-		<ssv-chips options.bind="options" remove.delegate="onRemove($event)"></ssv-chips>
+		<ssv-chips options.bind="options" remove.delegate="onRemove($event)" fill-style="greyscale"></ssv-chips>
 		<pre><code class="language-html" ssv-syntax>&lt;ssv-chips options.bind="options"&gt;&lt;/ssv-chips&gt;</code></pre>
 
-		<ssv-chips options.bind="options" type="label" color="danger"></ssv-chips>
+		<ssv-chips options.bind="options" type="label" color="danger" fill-style="greyscale"></ssv-chips>
+
+		<section repeat.for="fill of fillStyle">
+			<template repeat.for="focus of focusStyle">
+				<ssv-chips options.bind="options" type="label" focus-style.bind="focus" fill-style.bind="fill"></ssv-chips>
+			</template>
+		</section>
 
 		<h3>simple list</h3>
 		<ssv-chips options.bind="fruits" allow-remove="false"></ssv-chips>
@@ -25,19 +31,19 @@
 	remove.delegate="onRemove($event)"&gt;
 &lt;/ssv-chips&gt;</code></pre>
 		<pre><code class="language-typescript" ssv-syntax>onRemove(event: CustomEvent) {
-	console.log("onRemove :: item has been removed >>>", {
+	console.log("onRemove :: item has been removed", {
 		value: event.detail.value,
 		event: event
 	});
 }</code></pre>
 
-	<h3>disabled</h3>
-	<ssv-chips options.bind="options" disabled></ssv-chips>
-	<pre><code class="language-html" ssv-syntax>&lt;ssv-chips options.bind="options" disabled&gt;&lt;/ssv-chips&gt;</code></pre>
+		<h3>disabled</h3>
+		<ssv-chips options.bind="options" disabled></ssv-chips>
+		<pre><code class="language-html" ssv-syntax>&lt;ssv-chips options.bind="options" disabled&gt;&lt;/ssv-chips&gt;</code></pre>
 
-	<ssv-chips options.bind="options" disabled.bind="isDisabled"></ssv-chips>
-	<pre><code class="language-html" ssv-syntax>&lt;ssv-chips options.bind="options" disabled.bind="isDisabled"&gt;&lt;/ssv-chips&gt;</code></pre>
-	<button ssv-button click.delegate="toggleDisable()">${isDisabled ? "enable" : "disable"}</button>
+		<ssv-chips options.bind="options" disabled.bind="isDisabled"></ssv-chips>
+		<pre><code class="language-html" ssv-syntax>&lt;ssv-chips options.bind="options" disabled.bind="isDisabled"&gt;&lt;/ssv-chips&gt;</code></pre>
+		<button ssv-button click.delegate="toggleDisable()">${isDisabled ? "enable" : "disable"}</button>
 
 	</section>
 
