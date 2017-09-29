@@ -19,4 +19,5 @@ export const shellRoutes: RouteConfig[] = [
 		nav: true,
 		settings: { childRoutes: componentRoutes }
 	}
-].map(setRouteDefaults);
+	// tslint:disable-next-line:no-unnecessary-callback-wrapper
+].map(x => setRouteDefaults(x));
