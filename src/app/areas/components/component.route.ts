@@ -18,4 +18,5 @@ export const componentRoutes: RouteConfig[] = [
 		nav: false,
 		settings: {}
 	},
-].map(setRouteDefaults);
+	// tslint:disable-next-line:no-unnecessary-callback-wrapper
+].map(x => setRouteDefaults(x));

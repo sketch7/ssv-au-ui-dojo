@@ -4,8 +4,8 @@ Write-Host "========================" -ForegroundColor Green
 Write-Host "    Setup $($package.name)" -ForegroundColor Green
 Write-Host "========================" -ForegroundColor Green
 
-Write-Host "npm update..." -ForegroundColor Cyan
-& npm update
+Write-Host "npm install..." -ForegroundColor Cyan
+& npm install
 Write-host ""
 
 Write-Host "npm prune..." -ForegroundColor Cyan
