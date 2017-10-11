@@ -14,7 +14,6 @@ jobs:
       - run:
           name: Package Install
           command: |
-            echo -e "$NPM_USER\n$NPM_PWD\n$NPM_EMAIL" | npm login --scope=@ssv
             npm rebuild node-sass
             npm run build
       - run:
