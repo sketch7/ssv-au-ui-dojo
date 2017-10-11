@@ -14,11 +14,13 @@ jobs:
       - run:
           name: Package Install
           command: |
-            npm rebuild node-sass
-            npm run build
+            npm i
+            npm i gulp -g
       - run:
           name: build
-          command: npm run build -- --rel
+          command: |
+            npm rebuild node-sass
+            npm run build
       - run:
           name: test
           command: npm run lint
