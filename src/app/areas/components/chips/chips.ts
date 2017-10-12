@@ -10,8 +10,8 @@ export class ChipsSampleController {
 	colors = [null, "primary", "accent", "danger", "warn", "success", "info"];
 
 	fruits = ["banana", "strawberry", "melon"];
-	fillStyle = supportedFillStyles;
-	focusStyle = supportedFillStyles;
+	fillStyles = supportedFillStyles;
+	focusStyles = supportedFillStyles;
 
 	options: any[] = [
 		{ text: "Barbarian", value: "barbarian", iconImage: "/dist/assets/imgs/barb_150x190.jpg" },
@@ -19,16 +19,15 @@ export class ChipsSampleController {
 		{ text: "Crusader", value: "crusader", iconName: "shield", allowRemove: false },
 		{ text: "Demon Hunter", value: "demon-hunter", allowRemove: false },
 		{ text: "Wizard", value: "wizard", allowRemove: true }
-		// { text: "Demon Hunter", value: "demon-hunter", allowRemove: false, iconImage: "/dist/assets/imgs/yuna.jpg" }
 	];
 
-	availableOptions: any[] = [
-		{ text: "Barbarian", value: "barbarian" },
-		{ text: "Crusader", value: "crusader" },
-		{ text: "Demon Hunter", value: "demon-hunter" },
-		{ text: "Monk", value: "monk" },
-		{ text: "Witch Doctor", value: "witch-doctor" },
-		{ text: "Wizard", value: "wizard" },
+	heroes: any[] = [
+		// { id: 1, name: "iron man", profileImage: "/dist/assets/imgs/yuna.jpg"  },
+		{ id: 1, name: "iron man", profileImage: "/dist/assets/imgs/iron-man-48x48.png"  },
+		{ id: 2, name: "thor", logo: "gavel" },
+		{ id: 3, name: "wonder woman", alias: "WM", isDeletable: false },
+		{ id: 4, name: "batman", isDeletable: false },
+		{ id: 5, name: "super man", isDeletable: true }
 	];
 
 	private logger: ILog;
