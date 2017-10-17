@@ -1,0 +1,10 @@
+version: '3.3'
+
+services:
+  website-dojo:
+    image: ssv-au-ui-dojo
+    build: .
+    ports:
+      - 9000:9000
+    # volumes:
+    #   - ./wwwroot/.:/usr/src/app

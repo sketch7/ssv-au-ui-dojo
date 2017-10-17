@@ -3,16 +3,29 @@ Playground/dojo for sketch7 aurelia.
 
 # Getting started
 
+## Run via Docker
+```
+docker pull claylaut/ssv-ui-dojo && docker run -p 9000:9000 ssv-ui-dojo
+```
+access: http://localhost:9000/
+
+or 
+
+git clone this project
+run  `docker-compose up`
+access: http://localhost:9000/
+
 ## Setup Machine for Development
 Install/setup the following:
 
-- NodeJS
-- TypeScript 2.1+
-- SourceTree (or similar)
+- NodeJS v8+
+- Visual Studio Code or similar code editor
+- TypeScript 2.5+
+- Git + SourceTree, SmartGit or similar (optional)
 - Ensure to install **global NPM modules** using the following:
 
 ```shell
-npm install -g git gulp karma-cli yarn
+npm install -g git gulp yarn
 ```
 
 ### Project Setup
