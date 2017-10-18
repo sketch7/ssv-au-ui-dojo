@@ -13,6 +13,7 @@ export class ComponentService {
 		{ title: "Waves", key: "waves" },
 		{ title: "Badge", key: "badge" },
 		{ title: "Checkbox", key: "checkbox", },
+		{ title: "Chips", key: "chips", },
 		{ title: "Icon", key: "icon", },
 		{ title: "Select", key: "select" },
 		{ title: "Snackbar", key: "snackbar", },

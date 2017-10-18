@@ -1,0 +1,95 @@
+<template>
+	<section>
+		<h2>basic</h2>
+		<ssv-chips options.bind="options" color="primary"></ssv-chips>
+		<pre><code class="language-html" ssv-syntax>&lt;ssv-chips options.bind="options" color="primary"&gt;&lt;/ssv-chips&gt;</code></pre>
+		<pre><code class="language-typescript" ssv-syntax>const options = [
+	{ text: "Barbarian", value: "barbarian", iconImage: "/dist/assets/imgs/barb_150x190.jpg" },
+	{ text: "Monk", value: "monk", iconText: "MNKI" },
+	{ text: "Crusader", value: "crusader", iconName: "shield", allowRemove: false },
+	{ text: "Demon Hunter", value: "demon-hunter", allowRemove: false },
+	{ text: "Wizard", value: "wizard", allowRemove: true }		
+];</code></pre>
+
+		<h3>simple list</h3>
+		<ssv-chips options.bind="fruits" allow-remove="false"></ssv-chips>
+		<pre><code class="language-html" ssv-syntax>&lt;ssv-chips options.bind="fruits" allow-remove="false"&gt;&lt;/ssv-chips&gt;</code></pre>
+		<pre><code class="language-typescript" ssv-syntax>const fruits = ["banana", "strawberry", "melon"];</code></pre>
+
+		<h2>attributes</h2>
+		<h3>type</h3>
+		<ssv-chips options.bind="options" type="label"></ssv-chips>
+		<pre><code class="language-html" ssv-syntax>&lt;ssv-chips options.bind="options" type="label"&gt;&lt;/ssv-chips&gt;</code></pre>
+
+		<h3>color</h3>
+		<ssv-chips options.bind="options" color="danger"></ssv-chips>
+		<pre><code class="language-html" ssv-syntax>&lt;ssv-chips options.bind="options" color="danger"&gt;&lt;/ssv-chips&gt;</code></pre>
+
+		<h3>Specify all field properties</h3>
+		<ssv-chips options.bind="heroes"
+			color="success"
+			text-field="name"
+			value-field="id"
+			remove-field="isDeletable"
+			icon-image-field="profileImage"
+			icon-name-field="logo"
+			icon-text-field="alias"			
+		></ssv-chips>
+		<pre><code class="language-html" ssv-syntax>&lt;ssv-chips options.bind="heroes" 
+	color="success"
+	text-field="name"
+	value-field="id"
+	remove-field="isDeletable"
+	icon-image-field="profileImage"
+	icon-name-field="logo"
+	icon-text-field="alias"
+&gt;&lt;/ssv-chips&gt;</code></pre>
+		<pre><code class="language-typescript" ssv-syntax>const heroes = [
+	{ id: 1, name: "iron man", profileImage: "/dist/assets/imgs/iron-man-48x48.png"  },
+	{ id: 2, name: "thor", logo: "gavel" },
+	{ id: 3, name: "wonder woman", alias: "WM", isDeletable: false },
+	{ id: 4, name: "batman", isDeletable: false },
+	{ id: 5, name: "super man", isDeletable: true }	
+];</code></pre>
+
+		<h3>event: remove</h3>
+		<i>*note: remove a chip and check console.</i>
+		<ssv-chips options.bind="options" remove.delegate="onRemove($event)"></ssv-chips>
+		<pre><code class="language-html" ssv-syntax>&lt;ssv-chips options.bind="options"
+	remove.delegate="onRemove($event)"&gt;
+&lt;/ssv-chips&gt;</code></pre>
+		<pre><code class="language-typescript" ssv-syntax>onRemove(event: CustomEvent) {
+	console.log("onRemove :: item has been removed", {
+		value: event.detail.value,
+		event: event
+	});
+}</code></pre>
+
+		<h3>disabled</h3>
+		<ssv-chips options.bind="options" disabled></ssv-chips>
+		<pre><code class="language-html" ssv-syntax>&lt;ssv-chips options.bind="options" disabled&gt;&lt;/ssv-chips&gt;</code></pre>
+
+		<ssv-chips options.bind="options" disabled.bind="isDisabled"></ssv-chips>
+		<pre><code class="language-html" ssv-syntax>&lt;ssv-chips options.bind="options" disabled.bind="isDisabled"&gt;&lt;/ssv-chips&gt;</code></pre>
+		<button ssv-button click.delegate="toggleDisable()">${isDisabled ? "enable" : "disable"}</button>
+
+		<h2>variants</h2>
+
+		<section repeat.for="type of types">
+			<h3>type <strong>${type}</strong></h3>
+			<template repeat.for="fill of fillStyles">
+				<template repeat.for="focus of focusStyles">
+						<h3>fill-style <strong>${fill}</strong> focus-style: <strong>${focus}</strong></h3>	
+						<figure repeat.for="color of colors">
+							<ssv-chips type.bind="type"
+							color.bind="color" 
+							options.bind="options"
+							focus-style.bind="focus" 
+							fill-style.bind="fill"></ssv-chips>
+					</figure>
+				</template>
+			</template>
+		</section>
+
+	</section>
+</template>
