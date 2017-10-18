@@ -5,7 +5,7 @@ Playground/dojo for sketch7 aurelia.
 
 ## Run via Docker
 ```
-docker pull claylaut/ssv-ui-dojo && docker run -p 9000:9000 ssv-ui-dojo
+docker pull claylaut/ssv-ui-dojo && docker run -p 9000:9000 claylaut/ssv-ui-dojo
 ```
 access: http://localhost:9000/
 
